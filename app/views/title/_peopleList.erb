@@ -1,0 +1,37 @@
+
+
+<div class="PeopleList">
+  Director:
+  <ul id="<%=@title.id%>_directors_list" class="directors_list">
+    <% i = 1
+      
+       len = @title.ldirectors.count -%>
+    <% @title.ldirectors.each{|d| -%>
+      <% if d.ext_id.to_s.index('people')  %>
+        <li id="<%=@title.id%>_director_<%=i%>" class="director">
+          <a href="#" class="peopleLink" id="<%=d.id%>_director">
+            <%= d.name.html_safe %>
+          </a>
+          <% if len > i %>
+            <%='' -%>
+          <% end %>
+        </li>
+        <% i += 1 -%>
+      <% end %>
+    <% } -%>
+  </ul>  
+  Actors:
+  <ul id="<%=@title.id%>_actors_list" class="actors_list">
+     <% i = 1 
+        len = @title.lactors.count -%>
+    <% @title.lactors.each do |actor| -%>
+       <li id="<%=@title.id%>_actors_<%=i%>" class="actor">
+        <a href="#" class="peopleLink" id="<%=actor.id%>_actor">
+          <%= actor.name.html_safe %>
+        </a>
+         <%='' if len > i-%>
+       </li>
+       <% i += 1 -%>
+    <%end -%>
+  </ul>
+</div>

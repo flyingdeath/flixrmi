@@ -1,0 +1,49 @@
+
+module NetflixTitleControl
+
+   def queryDBFilterTitles(titles, filter, sort, queryCombos)
+     if titles.length > 0 
+       sortOrder = sort[sort.keys[0]]
+       filter['titlesid'] = "ltitles.ext_id in ("+ titles+")"
+       #filter['titlesid'] = "ltitles.id in ("+ mapAtt(titles).join(",")+")"
+       #filter['titlesid'] = "ltitles.ext_id in ('"+ titles.join("','")+"')"
+       case queryCombos
+         when 'normal'
+           ret = Ltitle.find(:all, :conditions => joinSqlHash(filter), :order => sortOrder)
+         when 'availability', 'availability,normal'
+           ret = getTitlesThroughFconnectorsFilterTitles( sortOrder, filter)
+         when 'format','format,normal'
+           ret = getTitlesThroughFormatsFilterTitles( sortOrder, filter)
+         when 'availability,format', 'availability,format,normal'
+           titleIds = mapAtt(getTitlesThroughFormatsFilterTitles(sortOrder, filter), "ltitles_id" )
+           s_filter = joinSqlHash(nilOutHashValues(filter,['formatType','normal']))
+           ret = Ltitle.getTitlesThroughFconnectors(titleIds, sortOrder, s_filter)
+         else
+       end
+     else
+      ret = []
+     end 
+     return ret
+   end
+#-------------------------------------------------------------------------------------------------#   
+   
+   def getTitlesThroughFormatsFilterTitles(strSort, filter)
+   
+     af       = joinSqlHash(nilOutHashValues(filter,['year','formatType','titlesid']))
+     f        = joinSqlHash(nilOutHashValues(filter,['formatType','availability']))
+     f_filter = joinSqlHash(nilOutHashValues(filter,['year','availability','titlesid']))
+     
+     titleIds  = mapAtt(Ltitle.find(:all,  :conditions => f, :select=>'id'))
+     formatIds = mapAtt(Lformat.find(:all, :conditions => f_filter))
+     titles   = Ltitle.getTitlesThroughFormats(nil, formatIds, strSort, f)
+     return titles
+   end 
+#-------------------------------------------------------------------------------------------------#   
+   
+   def getTitlesThroughFconnectorsFilterTitles(strSort, filter)
+     f = joinSqlHash(filter)
+     titles = Ltitle.getTitlesThroughFconnectors(nil, strSort, f)
+     return titles
+   end 
+
+end

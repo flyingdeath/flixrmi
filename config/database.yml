@@ -1,0 +1,27 @@
+
+development:
+  adapter: mysql2
+  database: netflixrmi
+  user: root
+  password: Faster
+  host: localhost
+
+test:
+  adapter: mysql2
+  database: netflixrmi_test
+  user: root
+  password: Faster
+  host: localhost
+
+
+production:
+  adapter: mysql2
+  database: netflixrmi
+  user: root
+  password: Faster
+  host: localhost
+#  adapter: mysql
+#  database: netflixrmi
+#  username: netflixrmi
+#  password: Wingzx01
+#  host: netflixrmi.flixmontage.com

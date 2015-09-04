@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+
+ HistoryItem: 
+   alternate_link: http://www.netflix.com/Movie/The_Illusionist/70134430
+   title: The Illusionist
+   titleShort: The Illusionist
+   id: http://api-public.netflix.com/users/T1OjS5jzPVFVWaCyxqVL0hps1y89G_ZbanQyzmSXnSXck-/rental_history/shipped/70134430
+   ext_id: http://api-public.netflix.com/catalog/titles/movies/70134430
+
+ Historydetails:
+   start_index: "0"
+   number_of_results: "3572"
+   results_per_page: "100"
+   url_template: http://api-public.netflix.com/users/T1OjS5jzPVFVWaCyxqVL0hps1y89G_ZbanQyzmSXnSXck-/rental_history?{-join|&|start_index|max_results}

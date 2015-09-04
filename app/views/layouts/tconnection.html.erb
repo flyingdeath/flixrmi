@@ -1,0 +1,135 @@
+<html>
+<head>
+
+<title> Test NetFlix Connection </title>
+
+  <style type="text/css">
+    /* <!-- */
+    #testTable td{ 
+      width:auto;
+      padding-left:20px;
+      padding-right:20px;
+    }
+    #testing{
+      background-color:red;
+      width:10px;
+      height:10px;
+      margin:10px;
+    }
+    /* --> */
+  </style>
+  
+
+  <%= javascript_include_tag  "/flixrmi/yui/build/yahoo-dom-event/yahoo-dom-event.js",
+                              "/flixrmi/yui/build/connection/connection-min.js",
+                              "/flixrmi/javascripts/app/connectionClass.js",
+                              "/flixrmi/javascripts/app/helperClass.js"%>  
+
+  <%=stylesheet_link_tag "/yui/build/fonts/fonts-min.css" %>
+  
+  <% javascript_tag  do -%>
+     var pasued = true;
+     var gIndex = 0;
+     window.onload = function(){
+      
+      var bPath = location.pathname.split("/")
+      var id    = parseInt(bPath[bPath.length -1]);
+      gIndex    = id;
+      updateDisplayIndex(gIndex);
+      
+      
+      if(!isNaN(id)){
+        sendForNextDataSet(id);
+       }else{
+        sendForNextDataSet(1);
+      }
+      
+      YAHOO.util.Event.addListener("toggleTesting", 'click', pasueTesting);
+      YAHOO.util.Event.addListener("getNext", 'click',       testSingle);
+      
+     }
+    
+     var setupConnection = function(i){
+       var Iindex = i+1;
+       return function(){
+         setTimeout(sendForNextDataSet_c(Iindex),5000);
+       }
+     }
+  
+     
+     var sendForNextDataSet_c = function(i){
+       var Iindex = i;
+       return function(){
+         sendForNextDataSet(Iindex);
+       }
+     }
+     
+     var pasueTesting = function(){
+      pasued = !pasued;
+      
+      if(!pasued){
+        if (gIndex){
+          if (gIndex !== 1){
+          //  gIndex++;
+          }
+       }
+        sendForNextDataSet(gIndex);
+        YAHOO.util.Dom.setStyle('testing','background-color','green');
+      }else{
+        YAHOO.util.Dom.setStyle('testing','background-color','red');
+      }
+      
+     }
+     
+     
+     var sendForNextDataSet = function(index){
+       try{
+        gIndex= index;
+        updateDisplayIndex(gIndex);
+        if(!pasued){
+        new connectionClass({elements:{one:{id:                'testDataView', 
+                                            baseUrl:           '/flixrmi/tconnection/nextApiCall/',
+                                            handleSuccessType: 'updateDom', 
+                                            params:            {id:index},
+                                            handleSuccess:      setupConnection(index)}}});
+        }
+       }catch(error){
+         debugger;
+       }
+     }
+     
+     var testSingle = function(){
+        new connectionClass({elements:{one:{id:                'testDataView', 
+                                            baseUrl:           '/flixrmi/tconnection/nextApiCall/',
+                                            handleSuccessType: 'updateDom', 
+                                            params:            {id:gIndex}
+                                           }
+                                       }
+                              });
+        gIndex++;
+        updateDisplayIndex(gIndex);
+        
+     }
+     
+     function updateDisplayIndex(index){
+       var indexRef = document.getElementById('TestIndex');
+       indexRef.innerHTML = index;
+       indexRef = null;
+     }
+     
+     
+  <% end -%>
+</head>
+<body>
+
+
+<p style='color: green' > <%= flash[:notice] %> </p>
+<button id="toggleTesting">Toggle Testing</button>
+<button id="getNext">Text Next</button>
+<div id="testing"></div>
+<div id="TestIndex"></div>
+<div id="testDataView">
+  <%= yield %>
+</div>
+</body>
+</html>

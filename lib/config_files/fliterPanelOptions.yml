@@ -1,0 +1,89 @@
+--- 
+ :selects: 
+   :Sort: 
+   - Name
+   - Year
+   - Availability
+   - Rating Predicted
+   - Rating Average
+   - Rating User
+   :Limit: 
+   - 25
+   - 50
+   - 100
+   - 200
+   - 400
+   - 1000
+   :Format: 
+   - All
+   - Instant
+   - Disc
+   - Blu-ray
+   - DVD
+   :Rating_Type: 
+   - Predicted
+   - Average
+   - User
+   - non-rated
+ :callback: 
+   :baseUrl: /flixrmi/application/listControl
+   :loadingImageId: loading
+   :loadingReadyClassName: ready
+   :loadingloadingClassName: loading
+   :mainViewId: categoryPanel_mainView
+   :maxKey: AtMost
+   :minKey: AtLeast
+   :selectControls: 
+     :format: FormatSelect
+     :ratingType: Rating_TypeSelect
+     :Sort: SortSelect
+     :limit: LimitSelect
+   :sliderControls: 
+     :year_filter: 0 
+     :rating_filter: 0 
+     :availability_filter: 0 
+ :sliderControls: 
+   :year_filter: 
+     :Label : Year
+     :dTickSize: 2.255
+     :type: daul
+     :dRange: 300
+     :outputOffSet: 1878
+   :rating_filter: 
+     :Label : Rating
+     :dTickSize:  30
+     :type: daul
+     :dRange: 300
+     :ouputLabels: 
+     - "0.0"
+     - "0.5"
+     - "1.0"
+     - "1.5"
+     - "2.0"
+     - "2.5"
+     - "3.0"
+     - "3.5"
+     - "4.0"
+     - "4.5"
+     - "5.0"
+   :availability_filter: 
+     :Label : Availability
+     :dTickSize: 25
+     :dRange: 300
+     :type: daul
+     :ouputLabels: 
+     - All
+     - Minus 1 Year
+     - Minus 6 Months
+     - Minus 3 Months
+     - Minus 1 Month
+     - Minus 1 Week
+     - Today
+     - Plus 1 Week
+     - Plus 1 Month
+     - Plus 3 Months
+     - Plus 6 Months
+     - Plus 1 Year
+     - All
+  
+   

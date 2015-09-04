@@ -1,0 +1,15 @@
+
+      <div          id="<%= @listType  %>_lookContainer"      class="LookGrid">
+        <div        id="<%= @listType %>_ShownDataContainer" class="ShownDataLess">
+          <div      id="<%= @listType %>_dataContainer"      class="DataPlacementHover">
+            <div    id="<%= @listType %>_thumbView"          class="ThumbLarge ThumbHoverLarge">
+               Simlar Titles:
+               <ul class="flimList" id="<%=@title.id%>_filmInfoPanel_subContainer">
+                  <%=  render :partial => "category/listCategoryLoopInner",
+                              :locals  => {:titles => @titles, :saved => false} %>
+               </ul>
+              <div class="vSpacer"></div>
+            </div>
+          </div>
+        </div>
+      </div>

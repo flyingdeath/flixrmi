@@ -1,0 +1,179 @@
+
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+.flimList {
+  position: absolute;
+  padding-left: 0px;
+}
+
+.flimTitle{
+  max-height:100px;
+  width:572px;
+}
+
+.flimItem,
+.actors_list,
+.directors_list{
+  list-style-type:none;
+}
+
+.flimInfo{
+    display: inline-block;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
+
+.ThumbNone .BoxArtLarge,
+.ThumbNone .BoxArtMedium,
+.ThumbNone .BoxArtSmall{
+  display:none;
+}
+
+.ThumbSmall .BoxArtLarge,
+.ThumbSmall .BoxArtMedium{
+  display:none;
+}
+
+.ThumbMedium .BoxArtLarge,
+.ThumbMedium .BoxArtSmall{
+  display:none;
+}
+
+.ThumbMedium .BoxArtLarge,
+.ThumbMedium .BoxArtSmall{
+}
+
+
+/*-------------------------------*/
+/*-------------------------------*/
+.BoxArtLarge,
+.BoxArtMedium,
+.BoxArtSmall{
+ text-align:center;
+}
+
+.ThumbLarge .BoxArtMedium,
+.ThumbLarge .BoxArtSmall{
+  display:none;
+}
+
+/*-------------------------------*/
+
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
+
+.ThumbLarge  li.flimItem:hover .BoxArtLarge,
+.ThumbMedium li.flimItem:hover .BoxArtMedium,
+.ThumbSmall  li.flimItem:hover .BoxArtSmall{
+  display:none;
+}
+
+.ThumbHoverLarge  li.flimItem:hover .BoxArtLarge,
+.ThumbHoverMedium li.flimItem:hover .BoxArtMedium,
+.ThumbHoverSmall  li.flimItem:hover .BoxArtSmall{
+  display:block;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
+.average_rating,
+.user_rating,
+.predicted_rating{
+  padding:5px;
+}
+
+.predicted_rating{
+  color:#FF3232;
+}
+
+.average_rating{
+  color:#00DD00;
+}
+.user_rating{
+ color:#FFFF00;
+}
+
+.ratingInfo{
+  width:110px;
+}
+
+
+/*-----------------------------------------------------------------------------------------*/
+
+.synopsis{
+  padding-top:10px;
+  float:right;
+  width: 430px;
+}
+
+.PeopleList{
+  float: right;
+  padding: 5px;
+  width: 410px;
+}
+.PeopleList ul{
+ /* padding: 0px;*/
+  margin: 0px;
+}
+.actors_list li{
+  display:inline-block;
+  padding: 0px;
+  margin: 0px;
+}
+
+.directors_list li{
+  display:inline-block;
+  padding: 0px;
+  margin: 0px;
+}
+
+.BoxArtLarge{
+  width:110px;
+  float: left;
+  padding: 10px;
+}
+
+.flimExtraInfo{
+  float: left;
+  clear:left;
+}
+.flimInfo{
+  width: 560px;
+}
+
+.ExtendedDataLoading{
+   left: 50%;
+   position: absolute;
+   top: 30%;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+.itemIndex {
+    float: right;       
+    margin-left: 10px;
+    margin-right: 23px;
+}
+/**/
+/*-----------------------------------------------------------------------------------------*/
+
+
+#ygddfdiv .flimThumbExtraInfo,
+#ygddfdiv .flimExtraInfo{
+  display:none;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+

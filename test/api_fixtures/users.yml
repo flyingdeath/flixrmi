@@ -1,0 +1,43 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+
+
+ userData: 
+   maturity_level: 
+   - "1000000"
+   title_formats: 
+   - Blu-ray
+   - DVD
+   can_instant_watch: "true"
+   nickname: TimeEffect
+   user_id: T1OjS5jzPVFVWaCyxqVL0hps1y89G_ZbanQyzmSXnSXck-
+   last_name: Spiegel
+   first_name: Brian
+    
+ feeds: 
+   feed_recommendations_link: http://api-public.netflix.com/users/T1OjS5jzPVFVWaCyxqVL0hps1y89G_ZbanQyzmSXnSXck-/recommendations?feed_token=BQAJAAEDEID8En-oisSBvrJw3Zr9CkgwmgTrzyrO7bxpGgQb19cKHNJUPzhzt4pjy0xc08lEfx-6rgcfKn25RSVDsLET-XDb&oauth_consumer_key=vpskc7vyw5zk527gkyuykhph&output=atom
+   feed_reviews_link: http://api-public.netflix.com/users/T1OjS5jzPVFVWaCyxqVL0hps1y89G_ZbanQyzmSXnSXck-/reviews?feed_token=BQAJAAEDEFHefIQbQWoMHDpEWzPpAuQwnjwSpoG6prv8_9Q5lFHimCDEXYpLYLODSw3LhHGFxt8JrwINLsGy8UYfjnw15CGO&oauth_consumer_key=vpskc7vyw5zk527gkyuykhph&output=atom
+   feed_rental_history_link: http://api-public.netflix.com/users/T1OjS5jzPVFVWaCyxqVL0hps1y89G_ZbanQyzmSXnSXck-/rental_history?feed_token=BQAJAAEDEDGJDrDhK3-bZrjs1Jk0uCcw_VrWdw5fXFg_hYy9MtztJe6sJ36d3FNEkA5lB2LGvSMq3_bYWnioQf6R61rVvgG4&oauth_consumer_key=vpskc7vyw5zk527gkyuykhph&output=atom
+   feed_queues_instant_link: http://api-public.netflix.com/users/T1OjS5jzPVFVWaCyxqVL0hps1y89G_ZbanQyzmSXnSXck-/queues/instant?feed_token=BQAJAAEDENRBJ02y9sdrw9LaVUq5YscwNJLT_DVeRxKLN20VCA5iTetsfNQekilwEaC1wtZ-l_7-F0LqTzuWeIDPftHW7bAC&oauth_consumer_key=vpskc7vyw5zk527gkyuykhph&output=atom
+   feed_rental_history_shipped_link: http://api-public.netflix.com/users/T1OjS5jzPVFVWaCyxqVL0hps1y89G_ZbanQyzmSXnSXck-/rental_history/shipped?feed_token=BQAJAAEDEDGJDrDhK3-bZrjs1Jk0uCcw_VrWdw5fXFg_hYy9MtztJe6sJ36d3FNEkA5lB2LGvSMq3_bYWnioQf6R61rVvgG4&oauth_consumer_key=vpskc7vyw5zk527gkyuykhph&output=atom
+   feed_at_home_link: http://api-public.netflix.com/users/T1OjS5jzPVFVWaCyxqVL0hps1y89G_ZbanQyzmSXnSXck-/at_home?feed_token=BQAJAAEDEMcDSR7OJOT_Q7FbmZxSABMw-o9Cf8FiQ6GD68pjKrF2XB_hNWUizA4YkigqBwuC9hFHQQ7Xv8NgX39NPO2Ynr8p&oauth_consumer_key=vpskc7vyw5zk527gkyuykhph&output=atom
+   feed_queues_instant_recent_link: http://api-public.netflix.com/users/T1OjS5jzPVFVWaCyxqVL0hps1y89G_ZbanQyzmSXnSXck-/queues/instant?feed_token=BQAJAAEDENRBJ02y9sdrw9LaVUq5YscwNJLT_DVeRxKLN20VCA5iTetsfNQekilwEaC1wtZ-l_7-F0LqTzuWeIDPftHW7bAC&oauth_consumer_key=vpskc7vyw5zk527gkyuykhph&output=atom&sort=date_added
+   feed_rental_history_returned_link: http://api-public.netflix.com/users/T1OjS5jzPVFVWaCyxqVL0hps1y89G_ZbanQyzmSXnSXck-/rental_history/returned?feed_token=BQAJAAEDEDGJDrDhK3-bZrjs1Jk0uCcw_VrWdw5fXFg_hYy9MtztJe6sJ36d3FNEkA5lB2LGvSMq3_bYWnioQf6R61rVvgG4&oauth_consumer_key=vpskc7vyw5zk527gkyuykhph&output=atom
+   feed_queues_disc_recent_link: http://api-public.netflix.com/users/T1OjS5jzPVFVWaCyxqVL0hps1y89G_ZbanQyzmSXnSXck-/queues/disc?feed_token=BQAJAAEDENRBJ02y9sdrw9LaVUq5YscwNJLT_DVeRxKLN20VCA5iTetsfNQekilwEaC1wtZ-l_7-F0LqTzuWeIDPftHW7bAC&oauth_consumer_key=vpskc7vyw5zk527gkyuykhph&output=atom&sort=date_added
+   feed_ratings_link: http://api-public.netflix.com/users/T1OjS5jzPVFVWaCyxqVL0hps1y89G_ZbanQyzmSXnSXck-/ratings/title/actual?feed_token=BQAJAAEDENDvZVgeGsfBv392n_jwWmkwYQ9S7u7tgi4WmJlmUioKlshP2OYUs_R4MzKx9kr0e1JrIRY26fGvwZyUATv-Hh0V&oauth_consumer_key=vpskc7vyw5zk527gkyuykhph&output=atom
+   feed_queues_disc_link: http://api-public.netflix.com/users/T1OjS5jzPVFVWaCyxqVL0hps1y89G_ZbanQyzmSXnSXck-/queues/disc?feed_token=BQAJAAEDENRBJ02y9sdrw9LaVUq5YscwNJLT_DVeRxKLN20VCA5iTetsfNQekilwEaC1wtZ-l_7-F0LqTzuWeIDPftHW7bAC&oauth_consumer_key=vpskc7vyw5zk527gkyuykhph&output=atom
+   feed_rental_history_watched_link: http://api-public.netflix.com/users/T1OjS5jzPVFVWaCyxqVL0hps1y89G_ZbanQyzmSXnSXck-/rental_history/watched?feed_token=BQAJAAEDEDGJDrDhK3-bZrjs1Jk0uCcw_VrWdw5fXFg_hYy9MtztJe6sJ36d3FNEkA5lB2LGvSMq3_bYWnioQf6R61rVvgG4&oauth_consumer_key=vpskc7vyw5zk527gkyuykhph&output=atom
+
+ feedsPartail:
+   feed_recommendations_link: http://api-public.netflix.com/users/T1OjS5jzPVFVWaCyxqVL0hps1y89G_ZbanQyzmSXnSXck-/recommendations?feed_token=
+   feed_reviews_link: http://api-public.netflix.com/users/T1OjS5jzPVFVWaCyxqVL0hps1y89G_ZbanQyzmSXnSXck-/reviews?feed_token=
+   feed_rental_history_link: http://api-public.netflix.com/users/T1OjS5jzPVFVWaCyxqVL0hps1y89G_ZbanQyzmSXnSXck-/rental_history?feed_token=
+   feed_queues_instant_link: http://api-public.netflix.com/users/T1OjS5jzPVFVWaCyxqVL0hps1y89G_ZbanQyzmSXnSXck-/queues/instant?feed_token=
+   feed_rental_history_shipped_link: http://api-public.netflix.com/users/T1OjS5jzPVFVWaCyxqVL0hps1y89G_ZbanQyzmSXnSXck-/rental_history/shipped?feed_token=
+   feed_at_home_link: http://api-public.netflix.com/users/T1OjS5jzPVFVWaCyxqVL0hps1y89G_ZbanQyzmSXnSXck-/at_home?feed_token=
+   feed_queues_instant_recent_link: http://api-public.netflix.com/users/T1OjS5jzPVFVWaCyxqVL0hps1y89G_ZbanQyzmSXnSXck-/queues/instant?feed_token=
+   feed_rental_history_returned_link: http://api-public.netflix.com/users/T1OjS5jzPVFVWaCyxqVL0hps1y89G_ZbanQyzmSXnSXck-/rental_history/returned?feed_token=
+   feed_queues_disc_recent_link: http://api-public.netflix.com/users/T1OjS5jzPVFVWaCyxqVL0hps1y89G_ZbanQyzmSXnSXck-/queues/disc?feed_token=
+   feed_ratings_link: http://api-public.netflix.com/users/T1OjS5jzPVFVWaCyxqVL0hps1y89G_ZbanQyzmSXnSXck-/ratings/title/actual?feed_token=
+   feed_queues_disc_link: http://api-public.netflix.com/users/T1OjS5jzPVFVWaCyxqVL0hps1y89G_ZbanQyzmSXnSXck-/queues/disc?feed_token=
+   feed_rental_history_watched_link: http://api-public.netflix.com/users/T1OjS5jzPVFVWaCyxqVL0hps1y89G_ZbanQyzmSXnSXck-/rental_history/watched?feed_token=

@@ -1,0 +1,32 @@
+<html>
+  <head>    
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+     <%=  javascript_tag do %>
+        var YWPParams =
+           {
+               autoplay:true,
+               volume:0.75,
+               playlink:false,
+               autoadvance:true,
+               displaystate:0,
+               parse: true
+         };
+     <% end -%>
+     <%= javascript_include_tag  "http://webplayer.yahooapis.com/player-beta.js" %>  
+  </head>
+  
+  
+  <body class="yui-skin-sam">
+<%  i = 0 %>
+<% if @tracks %>
+  <% @tracks.each{|a| %> 
+    <% i+= 1%>
+    <a href="<%= a.location %>" class="htrack" title="<%= a.title %>"  class="playlist_link"
+       tabindex="<%=i %>" type="audio/mpeg" >
+       <img src="<%= a.image_url %>" alt="" style="display:none" />
+       <%= a.creator  %></a>
+  <%  } %>
+<% end %>
+
+  </body>
+</html>

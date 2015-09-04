@@ -1,0 +1,2 @@
+module CueHelper
+end

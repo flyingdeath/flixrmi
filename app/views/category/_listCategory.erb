@@ -1,0 +1,14 @@
+
+ <ul class="flimList" id="<%=@listType%>_subContainer">
+    <%=  render :partial => "category/listCategoryLoop", 
+                :locals  => {:titles => @titles, :saved => false} %>
+ </ul>
+ <% if @listType  ==  "queuePanel" -%>
+  <br/>
+  <p>Saved:</p>
+   <ul class="flimList" id="<%=@listType%>_saved_subContainer">
+      <%=  render :partial => "category/listCategoryLoop", 
+                  :locals  => {:titles => @savedTitles, :saved => true} %>
+   </ul>
+ <%end -%>
+<div class="vSpacer"></div>

@@ -1,0 +1,11 @@
+<%  i = 0 %>
+<% if @tracks %>
+  <% @tracks.each{|a| %> 
+    <% i+= 1%>
+    <a href="<%= a.location %>" title="<%= a.title %>"  class="playlist_link"
+       tabindex="<%=i %>" type="audio/mpeg" >
+       <img src="<%= a.image_url %>" alt="" style="display:none" />
+       <%= a.creator  %></a><br/>
+  <%  } %>
+<% end %>
+

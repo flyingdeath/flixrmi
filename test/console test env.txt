@@ -1,0 +1,78 @@
+
+
+require "NetflixObjectTestHelper"
+include NetflixObjectTestHelper
+
+
+require "ApiFixtures"
+include ApiFixtures
+getSymbolizedFixtures :session
+
+
+getFixtures :ratings
+getFixtures :titles
+ 
+  title = Title.find_by_name(@session['session'], @titles['search'].name)
+
+    title = Title.find_recommendations(@session['session'])
+    ret = Title.find_recommendations_full(@session['session'])
+    
+Rating.find(i.join(","),@session['session'])
+
+
+require "ApiFixtures"
+include ApiFixtures
+getSymbolizedFixtures :session
+
+require "TitleControl.rb"
+include TitleControl
+u = @session['session'][:persistentHash][:user_id]
+list =Rails.cache.read("taglist"+ u)
+@titles = Ltitle.find(:all,  :conditions => ['id in (?)', list ])
+@states  = getTitleStates(@titles,@session['session'])
+
+
+
+new   = eval(File.open(Rails.root+ 'l.txt').read)
+clean = eval(File.open(Rails.root+ 'clean.txt').read)
+dup   = eval(File.open(Rails.root+ 'dups.txt').read)
+d = []
+
+dup.each{|a| a.each{|b| d << b }  }
+
+d = d.reject{|a| clean.index(a) }
+
+titles = find(:all,  :conditions => ['ext_id in (?)', new ])
+ 
+cri = titles.reject{|a| d.index(a.ext_id)}
+
+gc = Lgenre.find_by_name("Criterion Collection")
+
+gc = Lgenre.find(529)
+
+
+
+gc.ltitles.concat(cri)
+
+
+g = Lgenre.new({:name => "Criterion Collection"})
+
+if g.save 
+
+File.open(Rails.root+ 'Criterion.txt', "w"){|f| f.write("["+ids.join(",")+"]")}
+
+ k = []
+ r = []
+ 
+ l.each{|g|
+   k << g.join(",")
+ }
+ 
+ k.each{|i|
+   sleep(5)
+   r << Rating.find(i,@session['session'])
+ }
+ 
+ 
+  titles.each{|a| output += a.title + " \t " + a.release_year.to_s + " \t "+ a.id.to_s + "\n" }
+  

@@ -1,0 +1,35 @@
+
+.base_bg .tl,
+.base_bg .tr,
+.base_bg .bl,
+.base_bg .br {
+  position:absolute;
+  width:20px;
+  height:20px;
+  background-repeat:no-repeat;
+}
+
+
+.base_bg .tl {
+  background:url(../images/base_tl.png);
+  left: -1px;
+  top: 3px;
+}
+
+.base_bg .tr {
+  background:url(../images/base_tr.png);
+  right: -43px;
+  top: 3px;
+}
+
+.base_bg .br {
+  background:url(../images/base_br.png);
+  bottom: 3px;
+  right: -43px;
+}
+
+.base_bg .bl {
+  background:url(../images/base_bl.png);
+  bottom: 3px;
+  left: -1px;
+}

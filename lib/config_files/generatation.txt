@@ -1,0 +1,29 @@
+
+cd\webroot\netflixrmi
+
+ruby script\console
+
+
+s = "{refList:['mouseWheelPage'],eventList:{'mousewheel': {func: 'mv.mousePage', param: {instanceObj:'mv', baseUrl: 'mv.clientVarsUpdate', debugOutputId:'initialoutput'}}}}"
+
+s = "{refList:['window'],eventList:{'resize': {func: 'mv.timedUpdateClientViewport', param: {instanceObj:'mv', baseUrl: 'mv.clientVarsUpdate', debugOutputId:'initialoutput'}}}}"
+
+s = "{useDefaluts: true, menuId: 'mainMenu', 'mv': 'mv', placeHolderId: 'mainMenu_placeHolder', elements: 'menus'}"
+
+s = " {id:'inlineLoadContainer', containerId:'menuBarItemLoadcontainer', innerHTML:'loadContainer'}"
+
+s = " {mv: this, delay:500, width: '572', hidedelay:250, autodismissdelay:3600000,dataDelay:500, loadindIdSurfix:'_ExtendedDataLoading', dataContainerSurfix:'_ExtendedData', dataContainerClass:'ExtendedData', mainContainerSurfix:'Info', loadindClass:'loading',readyClass:'ready', baseUrl: '/category/extendedTitleData/', contianerClassName:'flimList', itemClassName:'flimItem', toolTipContainer: 'toolTip_container', ancestorClassNameList:['DataPlacementHover', 'DataPlacementClose']}"
+
+s = "{addInstantbaseUrl:'/cue/addInstant/', addDiscbaseUrl:'/cue/addDisc/', saveDiscbaseUrl:'/cue/saveDisc/', deletebaseUrl: '/cue/deleteTitle/', undoDeletebaseUrl: '/cue/undoDeleteTitle/', changeSimlarsIndex:'/title/changeSimlarsIndex/', titleItemPrefix: '_flim', undoLabel: 'Undo Delete', deleteLabel: ' Delete', simlarsConnectionSet:{id:'simlarsPanel_mainView', LoadingClassName: 'loading', loadingId: 'loading', ReadyClassName: 'ready'}, deleteConnectionSet: {LoadingClassName: 'loading', loadingId: 'loading', ReadyClassName: 'ready'}}"
+
+s = "{setbaseUrl:'/rating/setRating/', surfix: '_ratingBtn_', scaleSize: 5, ratedClass:'ratingBtnRated', unratedClass:'ratingBtnUnrated', clearClass:'ratingBtn', msgOnClass:'ratingSaving', msgOffClass:'ratingSave', msgSurfix:'_ratingText', displaySurfix:'_ratingNumericDisplay'}"
+
+s = "{queueBtns:{play:{idSurfix:'_play',funcName:'play'}, addInstantQueue:{idSurfix:'_add_instant_queue',funcName:'addInstant'}, addDiscQueue:{idSurfix:'_add_disc_queue',funcName:'addDisc'}, saveDiscQueue:{idSurfix:'_save_disc_queue',funcName:'saveDisc'}, deleteTitle:{idSurfix:'_delete',funcName:'deleteItemTitle'}} ratingBtns: {noOpinion:{idSurfix:'no_opinion',funcName:'setStrRating'}, notInterested:{idSurfix:'not_interested',funcName:'not_interested'}}}"
+
+s = " {sortValues: {'Title': ['_SortMenu', '_Sort_RatingMenu'], 'release_year': ['_SortMenu', '_Sort_RatingMenu'], 'Availability': ['_SortMenu', '_Sort_RatingMenu'], 'RatingUser': ['_Sort_RatingMenu', '_SortMenu'], 'RatingAverage': ['_Sort_RatingMenu', '_SortMenu'], 'RatingPredicted':['_Sort_RatingMenu', '_SortMenu']}; sortSet: {'_SortMenu':{'Title':0, 'release_year':1, 'Availability':2}, '_Sort_RatingMenu':{'RatingPredicted':0, 'RatingAverage':1, 'RatingUser':2}}; filterSet: {'_Filter_FormatMenu':{'All':0, 'Instant':1, 'Disc':2, 'Blu-ray':3, 'DVD':4}, '_Filter_RatingTypeMenu':{'Predicted':0, 'Average':1, 'User':2, 'Non-User':3}}; viewTypes: {'List': 0, 'Info List': 1, 'Hover List': 2, 'Thumbnails List': 3, 'Right Justfied List': 4, 'Thumbnails Grid': 5, 'Thumbnails Header Grid': 6, 'Thumbnails Close Grid': 7}}"
+
+j = ActiveResource::Formats::JsonFormat.decode(s)
+
+y = j.to_yaml
+
+

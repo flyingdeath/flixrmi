@@ -1,0 +1,46 @@
+<html>
+  <head>    
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <link rel="shortcut icon" href="http://www.flixmontage.com/favicon.ico" />
+     <title>Flix Montage beta</title>
+     <%=  javascript_tag do %>
+        var YWPParams =
+           {
+               autoplay:true,
+               volume:0.75,
+               playlink:false,
+               autoadvance:true,
+               displaystate:0,
+               parse: false
+         };
+     <% end -%>
+     <%=render :partial => "fileLink" %>  
+     <%= yield %>
+  </head>
+  
+  
+  <body class="yui-skin-sam" style="<%=@bodyBG%>">
+    <div id="mainMenu_placeHolder"></div>
+      <%=render :partial => "slidersMarkup"  %>
+      <%=render :partial => "filterPanel"  %>
+      <p class="flashoutput" >
+        <%= flash[:notice] %>
+      </p>
+      <div id="initialoutput"></div>
+      <%=render :partial => "veiwContainers" %>
+     
+      <%=render :partial => "limitDialog" %>
+      <div id="treeviewSidePanel" class="tvSidePanel_toggle">
+          <div id="treeview_placeHolder"  class="ygtv-highlight"></div>
+          <div class="pullTab"></div>
+          <div class="toggleTab" id="toggleTabClass"></div>
+      </div>
+      <div class="mainVeiwContainer" id="background_mainContainer"></div>
+      <div id="loadingMainScreen">
+      <div id="title">Loading...</div>
+      <div id="loadicon"></div></div>
+      <div id="emptyPlayList"></div>
+      <div id="toolTip_container"></div>   
+      <%=render :partial => "cache_pictures" %>
+  </body>
+</html>

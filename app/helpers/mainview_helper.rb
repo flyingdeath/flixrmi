@@ -1,0 +1,2 @@
+module MainviewHelper
+end

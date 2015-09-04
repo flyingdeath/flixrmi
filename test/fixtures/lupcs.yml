@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+lupcOne:
+  number: 0043396060463
+  ltitle: one
+  
+lupcTwo:
+  number: 0043396824393
+  ltitle: two

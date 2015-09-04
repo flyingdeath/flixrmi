@@ -1,0 +1,50 @@
+<div class="infoBackground" id="<%=title.id%>_<%=@listType%>_styledBG">
+
+<div class="flimTitle">
+  <span id="<%=title.id%>_<%=@listType%>_flimTitle"><%=title.title.html_safe%></span>
+  <% if @listType  ==  "bulksearchPanel" -%>
+       <a href="#" class="fullsearch" title="<%= @terms[title.ext_id] %>" 
+              id="<%=title.id%>_<%=@listType%>_searchLink" >Full Search</a>
+  <% elsif @listType  ==  "queuePanel" and !saved -%>
+      <span class="itemIndex"><%= itemIndex.to_s %></span>
+  <%end -%>
+</div>
+<div class="flimThumbExtraInfo" title="Double Click to open.">
+  <%=  render :partial => "category/ratingInfoBoxArt", 
+              :locals =>{ :ratingInfo => @ratings[title.ext_id],
+                          :title      => title}  %>
+  <div id="<%=title.id%>_<%=@listType%>_ExtendedData" class="ExtendedData"></div>
+  <div class="ExtendedDataLoading"><div class="ready" id="<%=title.id%>_<%=@listType%>_ExtendedDataLoading"></div></div>
+
+  
+  <div class="flimExtraInfo">
+      <%=  render :partial => "category/time_details", 
+                  :locals =>{ :ratingInfo => @ratings[title.ext_id],
+                              :title      => title}  %>
+                              
+      <%=  render :partial => "category/ratingInfo", 
+                  :locals =>{ :ratingInfo => @ratings[title.ext_id],
+                               :title      => title}  %>
+  </div>
+</div>
+<% if !@states[title.ext_id] 
+    id = title.ext_id.split("/").last
+    key = ""
+    @states.keys.each{|a|
+      if a.index(id)  
+        key = a 
+      end 
+    }
+    state = @states[key] 
+  else
+    state = @states[title.ext_id] 
+ end %>
+
+<%=  render :partial => "category/flimItemControls", 
+            :locals =>{ :ratingInfo => @ratings[title.ext_id],
+                        :title      => title,
+                        :titleState => state,
+                        :saved => saved}  %>
+
+                        
+</div>

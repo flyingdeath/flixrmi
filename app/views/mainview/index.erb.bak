@@ -1,0 +1,185 @@
+
+  <%=  javascript_tag do %>
+  
+  /*------------------------------------------------------------------------------------------------*/   
+    window.onload = function(){
+      try{
+        var helper = new helperClass();
+        var mv = new mainViewClass();
+        
+        mv.errorDiv = 'errorDisplay';
+        mv.errorPanel = 'errorPanel'; 
+        mv.imageClass = 'BoxArtImage';
+        mv.maxThumbWith = 110;
+        mv.maxThumbHeight = 150;
+        
+        mv.h = helper;                 
+        var mainSearchAC       = '<%= @autocomplete %>';
+        mv.clientVarsUpdate    = '<%= @clientVarsUpdate %>';
+        var searchField        = <%= @searchField.to_json.html_safe %>;
+        var noteTemplateHTML   = <%=(render :partial => "noteTemplate").to_json.html_safe  %>;
+        var searchFieldHTML    = <%=(render :partial => "searchField").to_json.html_safe  %>;
+        var loadContainer      = <%= (render :partial => "loadContainer").to_json.html_safe  %>;
+        var backgroundsPanelHTML = <%= (render :partial => "backgroundsPanel").to_json.html_safe %>;
+        var errorPanelHTML       = <%= (render :partial => "errorPanel").to_json.html_safe %>;
+        var lastfmPanelHTML    = <%= (render :partial => "lastfmPanel").to_json.html_safe %>;
+        var pageMarker         = <%= (render :partial => "pageMarker").to_json.html_safe %>;
+        var paginationMenu     = <%= @pagination.to_json.html_safe %>;
+        var paginationCallback = <%= @pagination[0]['callback'].to_json.html_safe %>;
+        var panelIds           = <%= @panels[:elements].to_json.html_safe %>;
+        var scrollObj          = <%= @scrollObj.to_json.html_safe %>;
+        var reszie             = <%= @mainPageSettings['resizeCallBack'].to_json.html_safe %>;
+        var initMenuSet        = <%= @mainPageSettings['initMenuSet'].to_json.html_safe %>;
+        var loadContainerObj   = <%= @mainPageSettings['loadContainer'].to_json.html_safe %>;
+        var hoverSettings      = <%= @mainPageSettings['hoverConnector'].to_json.html_safe %>;
+        var cueVars            = <%= @mainPageSettings['cueVars'].to_json.html_safe %>;
+        var ratingVars         = <%= @mainPageSettings['ratingVars'].to_json.html_safe %>;
+        var btns               = <%= @mainPageSettings['btns'].to_json.html_safe %>;
+        var titleVars          = <%= @mainPageSettings['titleVars'].to_json.html_safe %>;
+        var linkVars           = <%= @mainPageSettings['linkVars'].to_json.html_safe %>;
+        var bulksearchToggle   = <%= @mainPageSettings['bulksearchToggle'].to_json.html_safe %>;
+        var bulksearchBtn      = <%= @mainPageSettings['bulksearchBtn'].to_json.html_safe %>;
+        var menuOptions        = <%= @menuOptions.to_json.html_safe %>;
+        var notesOptions       = <%= @mainPageSettings['notesOptions'].to_json.html_safe %>;
+        var sliderControls     = <%= @fliterPanelOptions[:sliderControls].to_json.html_safe %>;
+        var flitercallback     = <%= @fliterPanelOptions[:callback].to_json.html_safe %>;
+        var sliderSet          = <%= @silderSet %>;
+        var lastfmPlayerOptions = <%= @mainPageSettings['lastfmPlayerOptions'].to_json.html_safe %>;
+        mv.viewTypesData       = <%= @viewTypesData[:data].to_json.html_safe %>;
+        mv.viewTypes           = <%= @viewTypes.to_json.html_safe %>;
+        mv.ViewEnvelop         = <%= @envelopedView.to_json.html_safe %>;
+        var panels             = <%= @panels.to_json.html_safe %>;
+        
+        var tree = <%= @tvNodes %>;
+        
+        var menus = {viewOptionsMenu: <%= @viewOptionsMenu %>,
+                     pages:               paginationMenu,
+                     searchMenu:      <%= @searchMenu %>};
+                     
+                
+        initMenuSet        = helper.evalKeys(initMenuSet,'mv', {'mv':mv});
+        loadContainerObj   = helper.evalKeys(loadContainerObj,'innerHTML', {'loadContainer':loadContainer});
+        reszie             = helper.evalKeys(reszie,'func,instanceObj,baseUrl', {'mv':mv});
+        bulksearchToggle   = helper.evalKeys(bulksearchToggle,'func,instanceObj', {'mv':mv});
+        bulksearchBtn      = helper.evalKeys(bulksearchBtn,'func,instanceObj', {'mv':mv});
+        scrollObj          = helper.evalKeys(scrollObj,'fn,instanceObj', {'mv':mv});
+        paginationCallback = helper.evalKeys(paginationCallback,'func,instanceObj', {'mv':mv});
+        searchField        = helper.evalKeys(searchField,'instanceObj,innerHTML', 
+                                      {'mv':mv, 'searchFieldHTML':searchFieldHTML});
+                                  
+        initMenuSet.elements = menus;    
+        reszie.refList.window = window;
+        
+    
+        mv.filterPanelSliders = new slidersClass({elements:sliderControls,'mv':mv });
+        mv.closeHook({name:'filterPanel', surfix:'Container'});
+        mv.goHook({name:'filter', surfix:'Container',initiSet:flitercallback});
+        
+        panels.slidersObj = new slidersClass({elements:sliderSet,'mv':mv, containerSurfix: '_sliderContainer' });
+        panels.menuOptions = new menuContextClass({optionSet:menuOptions, slidersObj:panels.slidersObj, 
+                                                  filterSlidersObj: mv.filterPanelSliders });
+        panels.mv = mv;
+        panels.pageMarker = pageMarker;
+        titleVars.mv = mv;
+        new menuClass(initMenuSet);  
+        new treeviewClass({id:'treeview_placeHolder',struct:tree, 'mv':mv});
+        
+                
+        panels.del = new delegateListClass({linkSet: linkVars, 
+                                            btnSet:btns, 
+                                            hoverSet: hoverSettings,
+                                            iSet: {hover:  new hoverDataConnectorClass(hoverSettings),
+                                                   rating: new ratingActionClass(ratingVars),
+                                                   cue:    new cueActionClass(cueVars),
+                                                   item:   new titleItemClass(titleVars)},
+                                            options: {
+                                                subContainerSufix: "_mainView",
+                                                'panelIds': panelIds
+                                             }});
+               
+        panels.del.initializeOne('background_mainContainer');                             
+     
+        
+        panels.ls      = new listSortClass({itemClassName: 'flimItem', 
+                                            cue:panels.del.iSet.cue, 
+                                            titleItemSurfix: '_flim',
+                                            scrollSurfix: '_scrollContainer'});
+                                          
+        panels.del.iSet.cue.titleObj =  panels.del.iSet.item;
+        mv.panelsObj = new panelClass(panels);
+        
+        mv.panelIds         = panelIds;
+        scrollObj.panelsObj = mv.panelsObj;        
+        
+        panels.del.iSet.cue.titleObj.panelsObj = scrollObj.panelsObj;
+        panels.del.iSet.cue.panelsObj = scrollObj.panelsObj;
+        mv.panelsObj.hover = panels.del.iSet.hover;
+        mv.hover = panels.hover;
+        
+        mv.scrollObj = new scrollClass(scrollObj);
+        mv.panelsObj.scrollObj = mv.scrollObj;
+                                     
+        mv.initalizeinfoContainer( loadContainerObj); 
+                                       
+        mv.initializeSearchField(searchField);
+    
+        notesOptions.templateHTML = noteTemplateHTML;
+        notesOptions.panelsObj = mv.panelsObj;
+        mv.noteObj = new notesActionClass(notesOptions) 
+                                         
+        helper.addlistenersSet(reszie);
+                                            
+        helper.addlistenersSet(paginationCallback);
+        helper.addlistenersSet(bulksearchToggle);
+        helper.addlistenersSet(bulksearchBtn);
+        
+        helper.addlistenersSet(bulksearchBtn);
+        
+        helper.addlistenersSet({refList:["toggleTabClass"],
+                                  eventList:{click:{func: helper.toggleClassName_P,
+                                                    param:{id:'treeviewSidePanel', 
+                                                          classNames: ['tvSidePanel', 
+                                                                       'tvSidePanel_toggle']}}}});
+
+                                 
+        mv.updateClientViewport({baseUrl:mv.clientVarsUpdate,
+                                debugOutputId:'initialoutput'});
+                                
+        mv.createPanel({id:"lastfmPanel", 
+                        innerHTML: lastfmPanelHTML, 
+                        header:"Last.fm ", 
+                        staticPanel: true, 
+                        panelOptions:{height:'325px', width: '250px'}});
+        
+        mv.createPanel({id:"backgroundsPanel", 
+                        innerHTML: backgroundsPanelHTML, 
+                        header:"Backgounds", 
+                        staticPanel: true, 
+                        panelOptions:{height:'400px'}});
+                        
+        new mediaPlayerClass(lastfmPlayerOptions);
+        
+        new backgroundsClass({url: mv.clientVarsUpdate, 'mv': mv, 
+                              contianerId:"backgroundsPanel",  
+                              thumbDirName:'thumbs',
+                              colorControlClass: 'colorDiv', 
+                              imageControlClass:  'bgControlImage',
+                              selectId: 'selectToggleBG'});
+                              
+        mv.createPanel({id:mv.errorPanel, innerHTML: errorPanelHTML, header:"Server Error" });
+        
+        helper.updateTitle(paginationMenu[0].id, paginationMenu[0].title);
+        
+        
+        helper.fadeAnimation({run: true, seconds: 1.0, obj:"loadingMainScreen", start:1.0, finish: 0.0, onComplete: function(){
+          YAHOO.util.Dom.setStyle("loadingMainScreen", "display", "none");
+        }})
+      }catch(error){
+        
+        debugger;
+        
+      }
+    }
+  /*------------------------------------------------------------------------------------------------*/   
+ <% end -%>
+ 

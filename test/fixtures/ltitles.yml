@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one:
+  release_year: 1997
+  title: La Femme Nikita
+  netflixLink: http://www.netflix.com/Movie/La_Femme_Nikita_Season_1/60030843
+  ext_id: http://api-public.netflix.com/catalog/titles/series/60030843
+  updated: 1268367696
+
+two:
+  release_year: 1995
+  title: Heat
+  netflixLink: http://www.netflix.com/Movie/Heat/70020509
+  ext_id: http://api-public.netflix.com/catalog/titles/movies/70020509
+  updated: 1267474098

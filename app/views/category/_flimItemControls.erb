@@ -1,0 +1,98 @@
+
+<div class="flimItemControlsContainer">
+  <input type="hidden" name="<%=title.id%>_<%=@listType%>_movieId" id="<%=title.id%>_<%=@listType%>_movieId" value="<%=title.ext_id%>"/>
+  <div id="<%=title.id%>_<%=@listType%>_flimControls"  class="flimItemControls">
+    <% if titleState -%>
+      <% if titleState.attributes['title_formats'] -%>
+        <%
+        dvdIndex     = titleState.attributes['title_formats'].index('DVD')
+        bluRayIndex  = titleState.attributes['title_formats'].index('Blu-ray')
+        instantIndex = titleState.attributes['title_formats'].index('Instant')
+        saveIndex    = titleState.attributes['title_states'].index('Save')
+
+        if instantIndex
+          isInInstantQueue  = (titleState.attributes['title_states'][instantIndex] == "In Queue")
+        else
+          isInInstantQueue  = false
+        end
+
+        if dvdIndex
+          isInDvdQueue  = (titleState.attributes['title_states'][dvdIndex] == "In Queue")
+        else
+          isInDvdQueue  = false
+        end
+
+        if bluRayIndex
+          isInBluRayQueue  = (titleState.attributes['title_states'][bluRayIndex] == "In Queue")
+        else
+          isInBluRayQueue  = false
+        end
+        queuePanel = (@listType == "queuePanel")
+
+        -%>
+
+          <div id="<%=title.id%>_<%=@listType%>_queueBtns" class="queueBtns">
+            <%if instantIndex and !saveIndex -%>
+               <div id="<%=title.id%>_<%=@listType%>_play" class="control-btn"><div class="play" title="Play"></div></div>
+            <%end -%>
+            <%if instantIndex and !queuePanel -%>
+              <%if !isInInstantQueue-%>
+                 <div id="<%=title.id%>_<%=@listType%>_add_instant_queue" class="control-btn"><div class="add_instant_queue" title="Add Instant Queue"></div></div>
+              <% elsif isInInstantQueue-%>
+                 <div id="<%=title.id%>_<%=@listType%>_add_instant_queue" class="control-btn"><div class="in_instant_queue" title="In Instant Queue"></div></div>
+              <%end -%>
+            <%end -%>
+            <%if !queuePanel %>
+              <% if !(isInDvdQueue or isInBluRayQueue)  -%>
+                <%if saveIndex -%>
+                 <div id="<%=title.id%>_<%=@listType%>_save_disc_queue" class="control-btn"><div class="save_disc_queue"  title="Save Disc Queue"></div></div>
+                <%elsif (dvdIndex or bluRayIndex) -%>
+                 <div id="<%=title.id%>_<%=@listType%>_add_disc_queue" class="control-btn"><div class="add_disc_queue"  title="Add Disc Queue"></div></div>
+                <%end -%> 
+              <%elsif  (isInDvdQueue or isInBluRayQueue) -%>
+                 <div id="<%=title.id%>_<%=@listType%>_add_disc_queue" class="control-btn"><div class="in_disc_queue" title="In Disc Queue"></div></div>
+              <%end -%> 
+            <%end -%> 
+          <%if @listType == "queuePanel" -%>
+            <input type="hidden" name="<%=title.id%>_<%=@listType%>_queueType" id="<%=title.id%>_<%=@listType%>_queueType" value="<%=@queueType%>"/>
+            <div id="<%=title.id%>_<%=@listType%>_delete" class="control-btn" ><div class="delete" title="Delete"></div></div>
+            <% #if !saveIndex -%>
+              <div id="<%=title.id%>_<%=@listType%>_moveToTop" class="control-btn"><div  class="moveToTop" title="Move To The Top"></div></div>
+            <% #end -%>
+          <% end -%>
+          </div>
+      <%end -%> 
+    <%end -%> 
+    <% if admin? -%>
+      <div class="tagControl">
+        Tag: <%= check_box_tag title.id.to_s + "_" + @listType.to_s + "_tag", "tagged" %>
+      </div>
+    <%end -%> 
+    <div id="<%=title.id%>_<%=@listType%>_ratingBtns" class="ratingBtns">
+       <%userRating = false -%>
+      <%if ratingInfo -%>
+        <%if ratingInfo.attributes['user_rating'] -%>
+          <div id="<%=title.id%>_<%=@listType%>_not_interested" class="control-btn"><div title="not_interested" class="not_interested_clear"></div></div>
+           <%userRating = true -%>
+          <%(1..5).each do |i| -%>
+             <%if ratingInfo.attributes['user_rating'].to_i >= i -%>
+                <div id="<%=title.id%>_<%=@listType%>_ratingBtn_<%=i.to_s%>" title="<%=i.to_s%>" class="ratingBtnRated"></div>
+             <% else -%>
+                <div id="<%=title.id%>_<%=@listType%>_ratingBtn_<%=i.to_s%>" title="<%=i.to_s%>" class="ratingBtn"></div>
+             <% end -%>
+          <%end -%>
+        <% end -%>
+      <% end -%>
+      <%if !userRating -%>
+        <% pre = ratingInfo.attributes['predicted_rating'].to_f -%>
+        <div class="predictedContainer"><div id="<%=title.id%>_<%=@listType%>_ratingBtn_Percent"  title="Predicted" class="ratingBtnPredicted" style="width:<%=(pre/5.0)*100 %>%"></div></div>
+        <div id="<%=title.id%>_<%=@listType%>_not_interested" class="control-btn"><div title="not_interested" class="not_interested"></div></div>
+        <%(1..5).each do |i| -%>
+           <div id="<%=title.id%>_<%=@listType%>_ratingBtn_<%=i.to_s%>"  title="<%=i.to_s%>" class="ratingBtnUnrated"></div>
+        <%end -%>
+        
+      <%end -%>
+      <div id="<%=title.id%>_<%=@listType%>_ratingText" class="ratingSave">Saving...</div>
+    </div>
+  </div>
+</div><!--flimItemControlsContainer-->

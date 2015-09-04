@@ -1,0 +1,5 @@
+  <%if ratingInfo -%>
+    <%if ratingInfo.attributes['BoxArtLarge'] -%>
+     <div class="BoxArtLarge"  id="<%=title.id%>_<%=@listType%>_BoxArt"><img class="BoxArtImage" src="<%= ratingInfo.attributes['BoxArtLarge']  %>"/></div>
+    <%end -%>
+  <%end -%>

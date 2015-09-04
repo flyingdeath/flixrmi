@@ -1,0 +1,13 @@
+
+    <%if title.attributes['availability'] -%>
+      <% a = Time.parse(title.attributes['availability'])  -%>
+      <div class="Availability"> <%=  a.year.to_s + '/' + a.month.to_s + '/' + a.day.to_s %></div>
+    <%end-%>
+    <%if title.attributes['release_year'] -%>
+      <div class="Year"> <%= title.attributes['release_year'] %></div>
+    <%end-%>
+    <%if ratingInfo -%>
+      <%if ratingInfo.attributes['runtime'] -%>
+        <div class="RunTime"> <%= (ratingInfo.attributes['runtime'].to_i/60).to_s %> minutes</div>
+      <%end-%>
+    <%end -%>

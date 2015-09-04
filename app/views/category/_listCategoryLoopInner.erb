@@ -1,0 +1,18 @@
+<% itemIndex = 0 -%>
+  <%if @ratings -%>
+    <% titles.each do |title|-%>
+      <% itemIndex += 1 -%>
+        <%if @ratings[title.ext_id] -%>
+           <li class="flimItem" id="<%=title.id%>_<%=@listType%>_flim">
+             <div class="flimInfo" id="<%=title.id%>_<%=@listType%>_flimInfo">
+                 <%=  render :partial => "category/details",
+                             :locals =>{ :ratingInfo => @ratings[title.ext_id],
+                                         :title      => title,
+                                         :titleState => @states[title.ext_id],
+                                         :itemIndex  => itemIndex,
+                                         :saved => saved}  %>
+             </div>
+           </li>
+        <% end -%>
+      <% end -%>
+   <% end-%>

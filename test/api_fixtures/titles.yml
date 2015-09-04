@@ -1,0 +1,156 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+#------------------------------------------------------------------------------------------------------------------------------------------------#
+#------------------------------------------------------------------------------------------------------------------------------------------------#
+#------------------------------------------------------------------------------------------------------------------------------------------------#
+
+ search:
+   name: "La Femme Nikita"
+   
+ reference:
+   title_ref: "http://api-public.netflix.com/catalog/titles/movies/60029028"
+
+ #------------------------------------------------------------------------------------------------------------------------------------------------#
+
+ autocomplete:
+   firstTitle: "{\"ResultSet\":{\"Result\":[{\"Title\":\"La Femme Nikita\"}]}}"
+
+ searchDetails: 
+   start_index: "0"
+   number_of_results: "826"
+   results_per_page: "100"
+   url_template: http://api-public.netflix.com/catalog/titles?{-join|
+
+ searchFirstTitle:
+   titleShort: La Femme Nikita
+   ext_id: http://api-public.netflix.com/catalog/titles/movies/60029028
+   titleRegular: La Femme Nikita
+
+#------------------------------------------------------------------------------------------------------------------------------------------------#
+
+ similarsFirstTitle:  
+   titleShort: "L\xC3\xA9on: The Professional"
+   ext_id: http://api-public.netflix.com/catalog/titles/movies/7880857
+   titleRegular: "L\xC3\xA9on: The Professional"
+
+#------------------------------------------------------------------------------------------------------------------------------------------------#
+ 
+ TitleAttributes: 
+   alternate_link: http://www.netflix.com/Movie/La_Femme_Nikita/60029028
+   average_rating: \"3.7\"
+   release_year: \"1990\"
+   BoxArtMedium: http://cdn-8.nflximg.com/en_us/boxshots/small/60029028.jpg
+   title: La Femme Nikita
+   BoxArtLarge: http://cdn-8.nflximg.com/en_us/boxshots/large/60029028.jpg
+   mpaa_ratings: 
+    - R
+   BoxArtSmall: http://cdn-8.nflximg.com/en_us/boxshots/tiny/60029028.jpg
+   titleShort: La Femme Nikita
+   runtime: \"7020\"
+   ext_id: http://api-public.netflix.com/catalog/titles/movies/60029028
+   genres: 
+     - Action &#38; Adventure
+     - Foreign Movies
+     - Thrillers
+     - Action Thrillers
+     - Crime Action &#38; Adventure
+     - Foreign Action &#38; Adventure
+     - Foreign Thrillers
+     - French Movies
+     - Crime Thrillers
+#------------------------------------------------------------------------------------------------------------------------------------------------#
+  
+ synopsis1:
+   synopsis: Internationally acclaimed director <a href="http://www.netflix.com/RoleDisplay/Luc_Besson/7884">Luc Besson</a> delivers the action-packed story of Nikita (<a href="http://www.netflix.com/RoleDisplay/Anne_Parillaud/71310">Anne Parillaud</a>), a ruthless street junkie whose killer instincts could make her the perfect weapon, in this French film that was remade as Point of No Return in the U.S. Recruited against her will into a secret government organization, Nikita is broken and transformed into a sexy, sophisticated "lethal weapon."
+ 
+ synopsis2:
+   synopsis: Internationally acclaimed director Luc Besson delivers the action-packed story of Nikita (Anne Parillaud), a ruthless street junkie whose killer instincts could make her the perfect weapon, in this French film that was remade as Point of No Return in the U.S. Recruited against her will into a secret government organization, Nikita is broken and transformed into a sexy, sophisticated "lethal weapon."
+
+ 
+ 
+ awards: 
+   - year: "1992"
+     golden_globe_awards: 
+     - Best Foreign Language Film nominee
+
+#------------------------------------------------------------------------------------------------------------------------------------------------#
+  
+ director:  
+   - name: Luc Besson
+     ext_id: http://api-public.netflix.com/catalog/people/7884
+   
+ cast: 
+   - name: Anne Parillaud
+     ext_id: http://api-public.netflix.com/catalog/people/71310
+   - name: Jean-Hugues Anglade
+     ext_id: http://api-public.netflix.com/catalog/people/20013753
+   - name: "Tch\xC3\xA9ky Karyo"
+     ext_id: http://api-public.netflix.com/catalog/people/20000087
+   - name: Jeanne Moreau
+     ext_id: http://api-public.netflix.com/catalog/people/65481
+   - name: Jean Reno
+     ext_id: http://api-public.netflix.com/catalog/people/77441
+   - name: Philippe Du Janerand
+     ext_id: http://api-public.netflix.com/catalog/people/20019059
+   - name: Marc Duret
+     ext_id: http://api-public.netflix.com/catalog/people/26553  
+   - name: Patrick Fontana
+     ext_id: http://api-public.netflix.com/catalog/people/30897
+   - name: Alain Lathiere
+     ext_id: http://api-public.netflix.com/catalog/people/53004
+#------------------------------------------------------------------------------------------------------------------------------------------------#
+  
+ AudioFormats: 
+   - audio: 
+     - " Dolby Digital 5.1"
+     - " Dolby Digital 5.1"
+     title_formats: 
+     - Blu-ray
+     languages: 
+     - French
+     - English
+   - audio: 
+     - " Dolby Digital 5.1"
+     - " Dolby Digital 5.1"
+     title_formats: 
+     - DVD
+     languages: 
+     - French
+     - English
+
+#------------------------------------------------------------------------------------------------------------------------------------------------#
+
+ screen_formats:
+   - title_formats: 
+     - Blu-ray
+     screen_formats: 
+     - Widescreen Anamorphic 2.35:1
+   - title_formats: 
+     - DVD
+     screen_formats: 
+     - Widescreen Anamorphic 2.35:1
+  
+  
+#------------------------------------------------------------------------------------------------------------------------------------------------#
+
+ recommendationsDetails:
+   start_index: "0"
+   number_of_results: "826"
+   results_per_page: "100"
+   url_template: http://api-public.netflix.com/catalog/titles?{-join|&|term|start_index|max_results}   
+   
+      
+#------------------------------------------------------------------------------------------------------------------------------------------------#
+ recommendation:
+   alternate_link: http://www.netflix.com/Movie/Portishead_Roseland_New_York_Live/70003980
+   title: "Portishead: Roseland New York Live"
+   titleShort: "Portishead: Roseland New York Live"
+   id: http://api-public.netflix.com/users/T1OjS5jzPVFVWaCyxqVL0hps1y89G_ZbanQyzmSXnSXck-/recommendations/70003980
+   ext_id: http://api-public.netflix.com/catalog/titles/movies/70003980
+   
+#------------------------------------------------------------------------------------------------------------------------------------------------#
+   
+   
+   
+   
+   
+   

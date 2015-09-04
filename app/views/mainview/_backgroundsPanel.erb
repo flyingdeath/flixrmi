@@ -1,0 +1,30 @@
+<div id="WallpaperContainer">
+  <div id="containerToggle">
+    <% 
+      s = ""
+      @wpfile[:containersList].each{|key, value| s += '<option value="'+key+'">'+value.to_s+'</option>'} 
+    %>
+    <%= select_tag "selectToggleBG" , s.html_safe %>
+  </div>
+  <div id="controlColors">
+    <div class="controlcontainer">
+      <% @wpfile[:colorlist].each{|a|%>
+          <div class="colorDiv" style="background:<%=a%>" id="colorControl_<%=a%>"></div>
+      <% } %>
+    </div>
+  </div>
+  <p></p>
+  <% @wpfile[:containersList].each{|key,value| -%>
+    <% if @wpfile[:walpaperfolder][value] -%>
+    <div id="<%=key%>">
+      <div class="controlcontainer">
+        <% @wpfile[:filelist][value].each{|a|%>
+          <div class="bgControlImage" id="imageControl<%=a.split(".")[0]%>">
+            <img src="/<%=@wpfile[:walpaperfolder][value]%>/<%=@wpfile[:thumbfolder]%>/<%=a%>" />
+          </div>
+        <% } %>
+      </div>
+    </div>
+    <% end -%>
+  <% } %>
+</div>

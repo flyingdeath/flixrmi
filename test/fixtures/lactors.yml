@@ -1,0 +1,7 @@
+one: 
+  name: Anna Paquin
+  ext_id: http://api-public.netflix.com/catalog/people/20001977
+  
+two: 
+  name: Dana Delany
+  ext_id: http://api-public.netflix.com/catalog/people/23599

@@ -1,0 +1,64 @@
+
+      <div class="movieStatsLists">
+        <% if @extended_title -%>
+          <% if @extended_title.attributes['genres'] -%>
+          <div class="genres">
+            Genres:
+            <ul class="genres_list">
+              <% @extended_title.attributes['genres'].each{|g| -%>
+                <li class="genre"><%= g.html_safe  %></li>
+              <% } -%>
+            </ul>
+          </div>
+          <% end -%>
+          <% if @extended_title.attributes['mpaa_ratings'] -%>
+            <div class="mpaa_ratings">
+              MPAA Rating:
+              <ul class="mpaa_ratings_list">
+                <% @extended_title.attributes['mpaa_ratings'].each{|m| -%>
+                  <li class="mpaa_rating"><%= m.html_safe  %></li>
+                <% } -%>
+              </ul>
+            </div>
+          <% end -%>
+        <% end -%>
+        <% if @state[@title.ext_id] -%>
+          <% if @state[@title.ext_id].attributes['title_formats'] -%>
+            <div class="formats">
+              Formats:
+              <ul class="formats_list">
+                <% @state[@title.ext_id].attributes['title_formats'].each{|f| -%>
+                  <li class="format"><%= f.html_safe  %></li>
+                <% } -%>
+              </ul>
+            </div>
+          <% end -%>
+        <% end -%>
+        <% if @LanguagesAudio -%>
+          <div class="language_audio">
+            Languages & Audio:
+            <table class="formats_tables">
+              <% set = @LanguagesAudio[0] -%>
+                <% if set -%>
+                  <% if set.attributes['title_formats'] -%>
+                    <% for i in 0..(set.attributes['title_formats'].length) -%>
+                      <tr>
+            <% if set.attributes['languages'] -%>
+              <% if set.attributes['languages'].class.to_s == "Array"  -%>
+                <td class="language"><%= set.attributes['languages'][i].to_s.html_safe   %></td>
+              <% end -%>
+            <% end -%>
+            <% if set.attributes['audio'] -%>
+              <% if set.attributes['audio'].class.to_s == "Array"  -%>
+                <td class="audio"><%= set.attributes['audio'][i].to_s.html_safe   %></td>
+              <% end -%>
+            <% end -%>
+                      </tr>
+                    <% end -%>
+                  <% end -%>
+                <% end -%>
+            </table>
+          </div>
+        <% end -%>
+      </div>
+      

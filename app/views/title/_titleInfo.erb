@@ -1,0 +1,65 @@
+<div id="<%=@listType%>_outerContainer">
+  <div id="<%=@listType%>_innerContainer">
+   <div id="<%=@listType%>_scrollContainer" class="veiwContainer">
+    <div class="titleShowContainer">
+      <div class="titleShow_innerContainer">
+  
+  
+      <%=  render :partial => "category/ratingInfoBoxArt", 
+                  :locals =>{ :ratingInfo => @rating[@title.ext_id],
+                              :title      => @title}  %>
+                              
+      <%=  render :partial => "synopsis" %>
+                            
+      <%=  render :partial => "peopleList" %>
+      
+      <%=  render :partial => "epsList" %>
+      
+      <br/>
+
+      <div class="movieStats">
+        <%=  render :partial => "category/time_details", 
+                    :locals =>{ :ratingInfo => @rating[@title.ext_id],
+                                :title      => @title}  %>
+
+        <%=  render :partial => "category/ratingInfo", 
+                    :locals =>{ :ratingInfo => @rating[@title.ext_id],
+                                 :title      => @title}  %>
+                                 
+        <%=  render :partial => "netflix_link" %>
+        
+      </div>
+                              
+      <%=  render :partial => "movieStatsLists" %>
+      <span class="flimItem" id="<%=@title.id%><%=@listType%>_flim">
+      <% if !@states[@title.ext_id] 
+          id = @title.ext_id.split("/").last
+          key = ""
+          @state.keys.each{|a|
+            if a.index(id)  
+              key = a 
+            end 
+          }
+          state = @state[key] 
+        else
+          state = @state[@title.ext_id] 
+       end %>
+        <%=  render :partial => "category/flimItemControls", 
+                    :locals =>{ :ratingInfo => @rating[@title.ext_id],
+                                :title      => @title,
+                                :titleState => state}  %>
+          <span class="flimItem" id="<%=@title.id%>_<%=@listType%>_flimInfo"></span>
+      </span>
+    </div>                          
+    <%=  render :partial => "filmInfolistSimlars" %>
+    </div>
+    
+  </div>
+  </div>
+</div>
+     <!--resultsData
+      var results = {};
+      results.header = <%= @title.title.to_json.html_safe %>;
+      results.listType = '<%= @listType %>';
+      results.status = <%= @title.title.to_json.html_safe %>;
+      resultsData-->

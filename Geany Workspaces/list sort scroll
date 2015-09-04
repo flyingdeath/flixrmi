@@ -1,0 +1,24 @@
+
+[indentation]
+indent_width=2
+indent_type=0
+indent_hard_tab_width=2
+detect_indent=false
+indent_mode=3
+
+[project]
+name=list sort scroll
+base_path=/var/rails/flixrmi/Geany Workspaces
+make_in_base_path=false
+
+[files]
+current_page=5
+FILE_NAME_0=3979;Ruby;0;16;0;1;0;/var/rails/flixrmi/app/controllers/category_controller.rb;0
+FILE_NAME_1=6401;Ruby;0;16;0;1;0;/var/rails/flixrmi/app/controllers/title_controller.rb;0
+FILE_NAME_2=5085;None;0;16;0;1;0;/var/rails/flixrmi/app/views/mainview/index.erb;0
+FILE_NAME_3=163;Ruby;0;16;0;1;0;/var/rails/flixrmi/app/models/rental_history.rb;0
+FILE_NAME_4=1463;Ruby;0;16;0;1;0;/var/rails/flixrmi/app/models/title.rb;0
+FILE_NAME_5=1824;Ruby;0;16;0;1;0;/var/rails/flixrmi/lib/ActiveNetflix.rb;0
+FILE_NAME_6=1047;Ruby;0;16;0;1;0;/var/rails/flixrmi/app/models/user.rb;0
+FILE_NAME_7=386;None;0;16;0;1;0;/var/rails/flixrmi/test/console test env.txt;0
+FILE_NAME_8=615;Ruby;0;16;0;1;0;/var/rails/flixrmi/test/unit/title_test.rb;0

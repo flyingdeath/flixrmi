@@ -1,0 +1,104 @@
+--- 
+- :label: Feedback / Blog 
+  :fn: tvShowPanel
+  :param: 
+    :panel: notePanel
+    :treeviewId: treeview_placeHolder
+- :label: Background Images / Colors 
+  :fn: tvShowPanel
+  :param: 
+    :panel: backgroundsPanel
+    :treeviewId: treeview_placeHolder
+- :label: Last.fm Radio 
+  :fn: tvShowPanel
+  :param: 
+    :panel: lastfmPanel
+    :treeviewId: treeview_placeHolder
+- :label: Tags
+  :fn: tvListTags
+  :param: 
+    :treeviewId: treeview_placeHolder
+    :mainViewId: tagsPanel_mainView
+    :baseUrl: /flixrmi/title/getTagList
+    :instanceObj: this.mv
+    :loadingImageId: loading
+    :loadingReadyClassName: ready
+    :loadingloadingClassName: loading 
+- :label: New 
+  :fn: tvListNew
+  :param: 
+    :mainViewId: newfilmsPanel_mainView
+    :baseUrl: /flixrmi/title/getNew
+    :treeviewId: treeview_placeHolder
+    :instanceObj: this.mv
+    :loadingImageId: loading
+    :loadingReadyClassName: ready
+    :loadingloadingClassName: loading 
+- :label: Recommendations 
+  :fn: tvListRecommendations
+  :param: 
+    :mainViewId: recommendationsPanel_mainView
+    :baseUrl: /flixrmi/title/getRecommendations
+    :treeviewId: treeview_placeHolder
+    :instanceObj: this.mv
+    :loadingImageId: loading
+    :loadingReadyClassName: ready
+    :loadingloadingClassName: loading    
+- :label: History 
+  :children: 
+  - All
+  - At Home
+  - Shipped
+  - Returned
+  - Watched
+  :fn: tvListHistory
+  :param: 
+    :mainViewId: historyPanel_mainView
+    :baseUrl: /flixrmi/history/listHistory
+    :treeviewId: treeview_placeHolder
+    :ParamKey: :HistoryType
+    :instanceObj: this.mv
+    :loadingImageId: loading
+    :loadingReadyClassName: ready
+    :loadingloadingClassName: loading    
+- :label: Links 
+  :children: 
+  - :label: MUBI
+    :url: http://www.MUBI.com
+    :target: blank
+  - :label: Criterion Collection
+    :url: http://www.criterion.com
+    :target: _blank
+  - :label: IMDB
+    :url: http://www.imdb.com
+    :target: _blank
+  - :label: Rotten Tomatoes
+    :url: http://www.rottentomatoes.com
+    :target: _blank
+  - :label: Netflix
+    :url: http://www.netflix.com
+    :target: _blank
+  - :label: Hulu
+    :url: http://www.Hulu.com
+    :target: _blank
+  - :label: Amazon Instant Video
+    :url: http://www.amazon.com/Instant-Video/b/ref=topnav_storetab_mov_aiv?ie=UTF8&node=2858778011
+    :target: _blank
+  - :label: Vudu
+    :url: http://www.vudu.com/
+    :target: _blank
+  - :label: Cinema Now
+    :url: http://www.cinemanow.com/
+    :target: _blank
+  - :label: Google
+    :url: http://www.google.com
+    :target: _blank
+  - :label: YouTube
+    :url: http://www.YouTube.com
+    :target: _blank
+  - :label: NPR
+    :url: http://www.npr.org
+    :target: _blank
+  - :label: All Songs Considered
+    :url: http://www.npr.org/programs/all-songs-considered/
+    :target: _blank

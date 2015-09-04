@@ -1,0 +1,23 @@
+<div id="lastfmContainer">
+<div id="authToggle">Login</div>
+<p></p>
+<div id="authFieldSet">
+  <p >
+  User:
+  <%= text_field "lastfm", :user, :size => 20  %>
+  </p>
+  <p>
+  Pass:
+  <%= password_field "lastfm", :pass, :size => 20  %>
+  </p>
+  <button name="lastfm_sumbit" id="lastfmAuth_sumbit">Login</button>
+  <span class="member_link_container"><a href="http://www.last.fm" target="_blank" class="member_link">Not a Member?</a></span>
+</div>
+Artist Name:<br/>
+<%= text_field "lastfm", :tune, :size => 20  %>
+
+<button name="lastfmsubmit_tune" id="lastfmsubmit_tune">Tune</button>
+
+<div id="lastfmPlaylist">
+</div>
+</div>

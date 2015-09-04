@@ -1,0 +1,27 @@
+<div id="<%=@listType%>_outerContainer">
+  <div id="<%=@listType%>_innerContainer">
+   <div id="<%=@listType%>_scrollContainer" class="veiwContainer">
+    <div class="titleShowContainer">
+      <div class="titleShow_innerContainer">
+        <div class="person_name">
+          <%= @extendedPerson.attributes['name'] %>
+        </div>
+        <span class="netflix_link_container">
+          <a class="netflix_link" target="blank" href="<%= @extendedPerson.attributes['alternate_link'] %>">Netflix Link</a>
+        </span>
+        <%if @extendedPerson.attributes['bio'] -%>
+          <div class="bio">
+              <%= @extendedPerson.attributes['bio'] %>
+          </div>
+        <%end -%>
+      </div>
+      <%=  render :partial => "filmography" %>         
+    </div>
+  </div>
+</div>
+     <!--resultsData
+      var results = {};
+      results.header = <%= @extendedPerson.attributes['name'].to_json.html_safe %>;
+      results.listType = '<%= @listType %>';
+      results.status = <%= @extendedPerson.attributes['name'].to_json.html_safe %>;
+      resultsData-->

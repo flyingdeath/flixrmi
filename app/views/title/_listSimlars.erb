@@ -1,0 +1,15 @@
+<span id="simlars_back" class="yui-button yui-push-button">
+  <em class="first-child">
+    <button type="button" name="simlars_back">Back</button>
+  </em>
+</span>  
+<span id="simlars_forward" class="yui-button yui-push-button">
+  <em class="first-child">
+    <button type="button" name="simlars_forward">Forward</button>
+  </em>
+</span>  
+ <ul class="flimList" id="<%=@listType%>_subContainer">
+    <%=  render :partial => "category/listCategoryLoop", 
+                :locals  => {:titles => @titles, :saved => false} %>
+ </ul>
+<div class="vSpacer"></div>

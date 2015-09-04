@@ -1,0 +1,19 @@
+<% attributes = ["first_name","last_name","nickname","created_at","updated_at","id","session_id"] -%>
+      <table id="Users" border="1">
+      <thead>
+         <tr>
+          <% attributes.each{|value| -%>
+             <td style="font-weight:bold;"><%= value %></td>
+           <%}-%> 
+         </tr>
+      </thead>
+      <tbody>
+          <% @users.each{|user| -%>
+           <tr>
+                <% attributes.each{|value| -%>
+                     <td><%= user.attributes[value] %></td>
+                <%}-%>
+           </tr>
+          <%}-%>
+      </tbody>
+      </table>

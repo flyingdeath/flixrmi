@@ -1,0 +1,23 @@
+--- 
+classPrefix: Search
+autocompleteURL: /flixrmi/search/autocomplete
+className: 
+  focus: SearchFocus
+  blur: SearchBlur
+id: MenuItemSearch
+searchSet: 
+  instanceObj: args.mv
+  mainViewId: searchPanel_mainView
+  loadingloadingClassName: loading
+  loadingImageId: loading
+  field: Search
+  loadingReadyClassName: ready
+  sreachContainerId: SearchEntireContainer
+  baseUrl: /flixrmi/search/search_start
+  bulkfieldId: bulksearch
+field: Search
+containerId: SearchAutoComplete
+autocompleteContainer: Search_AC_Container
+fillText: Search Now!
+innerHTML : args.searchFieldHTML
+bulkfieldId: bulksearch

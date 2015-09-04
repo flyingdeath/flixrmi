@@ -1,0 +1,20 @@
+
+    <%if ratingInfo -%>
+      <div class="ratingInfo">
+        <%if ratingInfo.attributes['predicted_rating'] -%>
+          <span title="Predicted" class="predicted_rating">
+            <%= ratingInfo.attributes['predicted_rating'] %>
+          </span>
+        <%end -%>
+        <%if ratingInfo.attributes['average_rating'] -%>
+          <span title="Average" class="average_rating">
+            <%= ratingInfo.attributes['average_rating'] %>
+          </span>
+        <%end -%>
+          <span  title="User" class="user_rating" id="<%=title.id%>_<%=@listType%>_ratingNumericDisplay">
+            <%if ratingInfo.attributes['user_rating'] -%>
+                <%= ratingInfo.attributes['user_rating'] %>
+            <%end -%>
+          </span>
+      </div>
+    <%end -%>

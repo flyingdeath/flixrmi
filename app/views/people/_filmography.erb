@@ -1,0 +1,16 @@
+
+      
+      <div          id="<%= @person.id %>_filmInfoPanel_lookContainer"      class="LookGrid">
+        <div        id="<%= @person.id %>_filmInfoPanel_ShownDataContainer" class="ShownDataLess">
+          <div      id="<%= @person.id %>_filmInfoPanel_dataContainer"      class="DataPlacementHover">
+            <div    id="<%= @person.id %>_filmInfoPanel_thumbView"          class="ThumbLarge ThumbHoverLarge">
+               Filmography:
+               <ul class="flimList" id="<%=@person.id%>_filmInfoPanel_subContainer">
+                  <%=  render :partial => "category/listCategoryLoopInner",
+                              :locals  => {:titles => @titles, :saved => false} %>
+               </ul>
+              <div class="vSpacer"></div>
+            </div>
+          </div>
+        </div>
+      </div>

@@ -1,0 +1,75 @@
+--- 
+:defaults:
+  :height: 600px
+  :width: 800px
+  :visible: false
+  :zIndex: 1
+:bgContianer: background_mainContainer
+:innerSurfix: _innerContainer
+:outerSurfix: _outerContainer
+:groups:
+- Lists
+- Info
+:menuId: _PanelsMenu
+:mainMenuId: mainMenu_placeHolder
+:domContainerSurfix: _c
+:heightOffSet: 40
+:bottomOffSet: 10
+:imageCheckUrl: /flixrmi/title/imageChecker
+:imagePathHD: '/boxshots/ghd/'
+:imagePathL: '/boxshots/large/'
+:BoxArtClass: BoxArtImage
+:BlankFileSize: 7718
+:elements:  
+  :searchPanel:   
+    :header: Search
+    :hookId: panelsContainer
+    :groupIndex: 1
+  :categoryPanel:
+    :header: Category
+    :hookId: panelsContainer
+    :groupIndex: 1
+  :queuePanel:
+    :header: Queue
+    :hookId: panelsContainer
+    :groupIndex: 1
+  :historyPanel:
+    :header: History
+    :hookId: panelsContainer
+    :groupIndex: 1
+  :simlarsPanel:
+    :header: Simlars
+    :hookId: panelsContainer
+    :groupIndex: 1
+  :recommendationsPanel:
+    :header: Recommendations
+    :hookId: panelsContainer
+    :groupIndex: 1
+  :newfilmsPanel:
+    :header: New
+    :hookId: panelsContainer
+    :groupIndex: 1
+  :bulkSearchPanel:
+    :header: Bulk Search
+    :hookId: panelsContainer
+    :groupIndex: 1
+  :notePanel:
+    :header: Blog Ideas
+    :hookId: panelsContainer
+    :groupIndex: 1
+  :tagsPanel:
+    :header: Taged
+    :hookId: panelsContainer
+    :groupIndex: 1
+:normalListPanels:
+  - searchPanel
+  - categoryPanel
+  - historyPanel
+  - simlarsPanel
+  - recommendationsPanel
+  - newfilmsPanel
+  - bulkSearchPanel
+  - notePanel
+  - tagsPanel
+  - queuePanel
+:ListOnlyPanels: []

@@ -1,0 +1,13 @@
+
+one: 
+  ltitles_id: 1
+  lformats_id: 2
+  availability_int: 1239087600
+  availability: 2009-04-07 15:00:00
+  id: 308729
+two: 
+  lformats_id: 1
+  availability_int: 862297200
+  availability: 1997-04-29 15:00:00
+  id: 308730
+  ltitles_id: 1

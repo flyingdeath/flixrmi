@@ -1,0 +1,79 @@
+---
+ session:
+   session_id: 833fbd2b91695864fb4d3d315d7f39f3
+   action: index
+   controller: mainview
+   :genresid: \"173\"
+   :clientheight: "950"
+   :clientwidth: "1920"
+   :authing: false
+   :persistentHash: 
+     :request_token: 
+     :etag: 
+     :consumer: 
+     :token: BQAJAAEDEOqQEd4jvpNQfxK__dNPRf8wAQNKRiW8FFm8V_lFjD-JBlVtW0xP2DEx0P0wTKpcOcJQjpJjos_wB5GKrnrtAG1c 
+     :user_id: T1OjS5jzPVFVWaCyxqVL0hps1y89G_ZbanQyzmSXnSXck-  
+     :request_time: 2011-05-16 14:40:42.239800 -07:00  
+     :secret: JzwwM2RCVEHd  
+     :request_count: 1
+   paginationVars: 
+     :perPage: 25
+     :pageIndex: 200
+     :isReset: false
+     :listType: listCategory
+     :page: 8
+   listSearch: 
+     viewType: List
+     SortOrder: ASC
+     filterSet: 
+       rating: 
+         FliterRatingType: Predicted
+     Sort: Title
+   listCategory: 
+     :viewType: List
+     :index: 200
+     :SortOrder: ASC
+     :inc: 25
+     :filterSet: 
+       rating: 
+         :AtLeast: 0.0
+         :AtMost: 5.0
+         :FliterRatingType: Predicted
+     :Sort: Title
+   listHistory: 
+     :viewType: List
+     :SortOrder: ASC
+     :filterSet: 
+       rating: 
+         :FliterRatingType: Predicted
+     :Sort: Title
+   listSimlars: 
+     :viewType: List
+     :SortOrder: ASC
+     :filterSet: 
+       rating: 
+         :FliterRatingType: Predicted
+     :Sort: Title
+   listNew: 
+     :viewType: List
+     :index: 25
+     :SortOrder: ASC
+     :inc: 25
+     :filterSet: 
+       rating: 
+         :AtLeast: 0.0
+         :AtMost: 5.0
+         :FliterRatingType: Predicted
+       formatType: 
+         :FormatType: Instant
+     :Sort: Title
+   listRecommendations: 
+     :viewType: List
+     :index: 25
+     :SortOrder: ASC
+     :inc: 25
+     :filterSet: 
+       rating: 
+         :FliterRatingType: Predicted
+     :Sort: Title
+ 

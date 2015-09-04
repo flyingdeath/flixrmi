@@ -1,0 +1,4 @@
+
+<%if @synopsis.attributes['synopsis'] -%>
+  <div id="<%=@title.id%>_titlesynopsis" class="synopsis" ><%= @synopsis.attributes['synopsis'].html_safe  %></div>
+<%end-%>

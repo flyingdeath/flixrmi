@@ -1,0 +1,61 @@
+  #Year_bg,
+  #Availability_bg,
+  #Rating_bg,  
+  #year_filter_bg,
+  #availability_filter_bg,
+  #rating_filter_bg{
+      position: relative;
+      background: url(../images/Silder_assets/dual_thumb_bg.gif) 0 5px no-repeat;
+      height: 28px;
+      width: 310px;
+  }
+
+  #Year_bg div,
+  #Availability_bg div,
+  #Rating_bg div,
+  #year_filter_bg div,
+  #availability_filter_bg div,
+  #rating_filter_bg div {
+      position: absolute;
+      cursor: default;
+      top: 4px;
+  }
+
+  #Year_bg span,
+  #Availability_bg span,
+  #Rating_bg span,
+  #year_filter_bg span,
+  #availability_filter_bg span,
+  #rating_filter_bg span {
+      position: absolute;
+      background: url(../images/Silder_assets/dual_thumb_bg.gif) 0 0 repeat-x;
+      _font-size: 5px; /* prevent IE6 expanding the box height to font-size */
+      top: 10px;
+      left: 12px;
+      height: 13px;
+      width: 288px;
+  }
+
+  .sliderContainer{
+    /*
+     visibility:hidden;
+    */
+    position: absolute;
+    left:21px;
+    z-index:100;
+    width:300px;
+    padding:20px;
+    
+    background-color:#222;
+  }
+  
+  .SliderClose{
+    background-image: url("../yui/build/assets/skins/sam/sprite.png");
+    background-position: 0 -300px;
+    background-repeat: no-repeat;
+    height: 18px;
+    left: 93%;
+    position: relative;
+    top: 0;
+    width: 26px;
+  }

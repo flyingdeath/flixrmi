@@ -1,0 +1,85 @@
+--- 
+- text: !binary |
+     4peAIOKWtg==
+     
+  id: mouseWheelPage
+  title: Use Mouse Wheel to Page Up/Down
+  callback:
+    eventList: 
+      mousewheel: &id001
+        param: 
+          instanceObj: args.mv
+          :surfix: _scrollContainer
+        func: args.mv.mousePage
+      DOMMouseScroll: *id001
+    refList: 
+    - mouseWheelPage    
+- text: !binary |
+     4p2C
+     
+  id: mouseWheelRolodex
+  title: Use Mouse Wheel to Switch Panel Focus
+  callback:
+    eventList: 
+      mousewheel: &id001
+        param: 
+          instanceObj: args.mv
+          :surfix: _scrollContainer
+        func: args.mv.mouseRolodex
+      DOMMouseScroll: *id001
+      mouseout:
+        param: 
+          instanceObj: args.mv
+          :surfix: _scrollContainer
+        func: args.mv.mouseRolodexOut
+      mouseover:
+        param: 
+          instanceObj: args.mv
+          :surfix: _scrollContainer
+        func: args.mv.mouseRolodexOver
+    refList: 
+    - mouseWheelRolodex    
+- text: !binary |
+     4pay
+     
+  id: ScrollAtuoPageUP
+  callback:
+    eventList: 
+      click: &id001
+        param: 
+          instanceObj: args.mv
+          :surfix: _scrollContainer
+        func: args.mv.scrollAuto
+    refList: 
+    - ScrollAtuoPageUP    
+- text: !binary |
+     4pe8
+     
+  id: ScrollAtuoStop
+  callback:
+    eventList: 
+      click: &id001
+        param: 
+          instanceObj: args.mv
+          :surfix: _scrollContainer
+        func: args.mv.stopScrolling
+    refList: 
+    - ScrollAtuoStop    
+- text:  !binary |
+     4pa8
+     
+  id: ScrollAtuoPageDown
+  callback:
+    eventList: 
+      click: &id001
+        param: 
+          instanceObj: args.mv
+          :surfix: _scrollContainer
+        func: args.mv.scrollAuto
+    refList: 
+    - ScrollAtuoPageDown 
+    
+    
+    
+    
+    

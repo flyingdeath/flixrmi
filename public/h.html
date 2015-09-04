@@ -1,0 +1,28 @@
+<html>
+<head></head>
+<body>
+
+
+
+<input type="file" id="input"  onchange="handleFiles(this.files)" />
+<button  onclick="changeFile()"  ></button>
+
+<script type="text/javascript">
+//<![CDATA[
+var handleFiles = function(fList){
+  debugger;
+};
+
+var changeFile = function(){
+  var f = "http://cdn-3.nflximg.com/en_us/boxshots/ghd/70126623.jpg"
+var file = document.getElementById('input');
+	file.src = f //"file://" + f.replace(/^\s*|\s*$/g,"");
+file = null;
+};
+
+
+
+//]]>
+</script>
+</body>
+</html>

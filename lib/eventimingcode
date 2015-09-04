@@ -1,0 +1,59 @@
+
+Rails.cache.read('request_time')
+Rails.cache.write('request_time',Time.now)
+
+Rails.cache.write('request_count',0)
+Rails.cache.write('request_count',1)
+
+c = Rails.cache.read('request_count')
+c += 1
+Rails.cache.write('request_count',c)
+
+
+  def evenTimingRequestCheck()
+  
+    if !(Rails.cache.read('request_time'))
+      Rails.cache.write('request_time',Time.now)
+      Rails.cache.write('request_count',0)
+    end 
+    
+    if (Time.now - Rails.cache.read('request_time').to_time) <= 100
+      Rails.cache.write('request_count', Rails.cache.read('request_count').to_i + 1)
+      Logger.new(STDOUT).info 'request_count = '+ Rails.cache.read('request_count').to_s
+      if Rails.cache.read('request_count') >= 4
+        Logger.new(STDOUT).info 'sleep ' 
+        sleep(2)         
+        Rails.cache.write('request_time',Time.now)
+        Rails.cache.write('request_count',1)
+      end
+    else
+        Logger.new(STDOUT).info 'reset request_count = '+ Rails.cache.read('request_count').to_s
+        Rails.cache.write('request_time',Time.now)
+        Rails.cache.write('request_count',1)
+        
+    end 
+  end
+  
+  def evenTimingRequestCheck()
+  
+    if !(@persistentHash[:request_time])
+      @persistentHash[:request_time] = Time.now
+      @persistentHash[:request_count] = 0
+    end 
+    
+    if (Time.now - @persistentHash[:request_time]) <= 1
+      @persistentHash[:request_count] += 1
+        Logger.new(STDOUT).info 'request_count = '+ @persistentHash[:request_count].to_s
+      if @persistentHash[:request_count] >= 4
+        Logger.new(STDOUT).info 'sleep ' 
+        sleep(1)         
+        @persistentHash[:request_time] = Time.now
+        @persistentHash[:request_count] = 1
+      end
+    else
+        Logger.new(STDOUT).info 'reset request_count = '+ @persistentHash[:request_count].to_s
+       @persistentHash[:request_time] = Time.now
+       @persistentHash[:request_count] = 1
+    end 
+  end
+  

@@ -1,0 +1,25 @@
+<ul id="noteDisplaylist">
+  <% @notes.each do |note| %>
+    <% if note.done == "true"-%>
+      <% noteclass ="doneItem" -%>  
+    <% else -%>
+      <% noteclass ="non-doneItem" -%>
+    <% end -%>
+    
+    <li class="<%= noteclass%>" id="noteitem_<%= note.id%>">
+      <h4><%= note.heading %></h4>
+      <%= note.body.html_safe %><br/>
+      <div class="meta_info">
+        By:<%= note.name %>,&nbsp;
+        <%= time_ago_in_words(note.created_at.to_time) %> ago.
+      </div>
+      
+      
+      <% if admin? -%>
+        <%= check_box_tag("noteDone_"+ note.id.to_s, 1, 
+                          (note.done == "true"), {:class => "doneCheck"}) %>Done
+        &nbsp;<a href="#" class="destroy_link" id="noteDelete_<%=note.id.to_s%>">Delete</a>
+      <% end -%>
+    </li>
+  <% end %>
+</ul>

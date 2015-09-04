@@ -1,0 +1,62 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+ 
+ #------------------------------------------------------------------------------------------------------------------------------------------------#
+ #------------------------------------------------------------------------------------------------------------------------------------------------#
+ #------------------------------------------------------------------------------------------------------------------------------------------------#
+ search:
+   name: "Anne Parillaud"
+ 
+ 
+ reference:
+   person_id: "71310"
+   
+ fullReference:
+   person_ref: http://api-public.netflix.com/catalog/people/71310
+    
+ #------------------------------------------------------------------------------------------------------------------------------------------------#
+    
+ searchDetails:
+   start_index: "0"
+   number_of_results: "5295"
+   results_per_page: "100"
+   url_template: http://api-public.netflix.com/catalog/people?{-join|
+   
+ firstPerson:
+   name: Anne Parillaud
+   ext_id: http://api-public.netflix.com/catalog/people/71310
+    
+ #------------------------------------------------------------------------------------------------------------------------------------------------#
+ person1:
+   name: Anne Parillaud
+   ext_id: http://api-public.netflix.com/catalog/people/71310
+ 
+ #------------------------------------------------------------------------------------------------------------------------------------------------#
+ roles:
+ - title: The Last Mistress
+   titleShort: The Last Mistress
+   ext_id: http://api-public.netflix.com/catalog/titles/movies/70098328
+ - title: Promised Land
+   titleShort: Promised Land
+   ext_id: http://api-public.netflix.com/catalog/titles/movies/70049758
+ - title: Sex Is Comedy
+   titleShort: Sex Is Comedy
+   ext_id: http://api-public.netflix.com/catalog/titles/movies/60027731
+ - title: The Man in the Iron Mask
+   titleShort: The Man in the Iron Mask
+   ext_id: http://api-public.netflix.com/catalog/titles/movies/8179125
+ - title: Frankie Starlight
+   titleShort: Frankie Starlight
+   ext_id: http://api-public.netflix.com/catalog/titles/movies/70064626
+ - title: Map of the Human Heart
+   titleShort: Map of the Human Heart
+   ext_id: http://api-public.netflix.com/catalog/titles/movies/60036120
+ - title: Innocent Blood
+   titleShort: Innocent Blood
+   ext_id: http://api-public.netflix.com/catalog/titles/movies/628546
+ - title: La Femme Nikita
+   titleShort: La Femme Nikita
+   ext_id: http://api-public.netflix.com/catalog/titles/movies/60029028
+ #------------------------------------------------------------------------------------------------------------------------------------------------#
+ #------------------------------------------------------------------------------------------------------------------------------------------------#
+ #------------------------------------------------------------------------------------------------------------------------------------------------#
+ 

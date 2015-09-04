@@ -1,0 +1,111 @@
+
+
+ <% if (apiObj) -%>
+  
+  <% classType =  (apiObj.class.to_s)  -%>
+  
+  <% if classType ==  "ActiveDummySet"  -%>
+    <% info = apiObj.set -%>
+    <%= info.count.to_s %>
+  <% else-%>
+    <% info = apiObj  -%>
+  <% end -%>
+  
+  <% if classType ==  "ActiveDummySet" -%>
+      <table id="SetDataTable">
+      <thead>
+         <tr>
+           <% apiObj.details.attributes.each{|key,value| -%>
+             <td style="font-weight:bold;"><%=key%></td>
+           <%}-%> 
+         </tr>
+      </thead>
+      <tbody>
+       <tr>
+          <% apiObj.details.attributes.each{|key,value| -%>
+               <td><%=value%></td>
+          <%}-%>
+       </tr>
+      </tbody>
+      </table>
+   <% end -%>
+   
+  <% classType =  (info.class.to_s)  -%>
+  
+  <% if classType ==  "String" %>
+    <%= info %>
+  <% elsif classType ==  "ActiveDummy" %>
+      <table id="testTable">
+       <thead>
+          <tr>
+            <% info.attributes.each{|key,value| -%>
+              <td style="font-weight:bold;"><%=key%></td>
+            <%}-%> 
+          </tr>
+       </thead>
+       <tbody>
+        <tr>
+          <% info.attributes.each{|key,value| -%>
+            <td><%=value%></td>
+          <%}-%>
+        </tr>
+       </tbody>
+       </table>
+  <% elsif classType ==  "Hash" %>
+      <table id="testTable">
+       <thead>
+          <tr>
+            <% info[info.keys[0]].attributes.each{|key,value| -%>
+              <td style="font-weight:bold;"><%=key%></td>
+            <%}-%> 
+          </tr>
+       </thead>
+       <tbody>
+       <% info.each{|key,value| -%>
+        <tr>
+          <% value.attributes.each{|key,value| -%>
+            <td><%=value%></td>
+          <%}-%>
+        </tr>
+       <%}-%>
+       </tbody>
+       </table>
+  <% elsif classType == "Array" %>
+        <table id="testTable">
+        <thead>
+           <tr>
+              <%if info[0] -%>
+               <% info[0].attributes.each{|key,value| -%>
+                 <td style="font-weight:bold;"><%=key%></td>
+               <%}-%> 
+             <%end -%>
+           </tr>
+        </thead>
+        <tbody>
+        <% info.each{|value| -%>
+          <tr>
+            <% if value.class.to_s == "Array" %>
+              <% value.each{|value| -%>
+                <% value.attributes.each{|key1,value1| -%>
+                  <td><%=value1%></td>
+                <%}-%>
+              <% } %>
+            <% else %>
+              <% value.attributes.each{|key,value| -%>
+                <td><%=value%></td>
+              <%}-%>
+            <% end %>
+         </tr>
+         
+        <%}-%>
+        </tbody>
+        </table>
+   <%end %>
+ <%else-%>
+      <p>nil</p>
+ <%end%>
+  <!--%= debug apiObj %-->
+  <%= apiObj.to_yaml %>
+  <!--%=  apiObj.inspect %-->
+ 
+ 

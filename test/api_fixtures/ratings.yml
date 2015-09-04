@@ -1,0 +1,57 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+ 
+  #------------------------------------------------------------------------------------------------------------------------------------------------#
+  #------------------------------------------------------------------------------------------------------------------------------------------------#
+ reference1:
+   title_ref: "http://api-public.netflix.com/catalog/titles/movies/60029028"
+   rating1: 1
+   rating2: 5
+   final_rating: 4
+    
+ reference2:
+   title_ref: "http://api-public.netflix.com/catalog/titles/series/60030843/seasons/60030843"
+   rating1: 5
+   rating2: 2
+   final_rating: 3
+  #------------------------------------------------------------------------------------------------------------------------------------------------#
+   
+ status: 
+   status_code: "200"
+   message: Your rating has been set
+ 
+  #------------------------------------------------------------------------------------------------------------------------------------------------#
+ ratingDetails:  
+   alternate_link: http://www.netflix.com/Movie/La_Femme_Nikita/60029028
+   average_rating: "3.7"
+   BoxArtMedium: http://cdn-8.nflximg.com/en_us/boxshots/small/60029028.jpg
+   BoxArtLarge: http://cdn-8.nflximg.com/en_us/boxshots/large/60029028.jpg
+   BoxArtSmall: http://cdn-8.nflximg.com/en_us/boxshots/tiny/60029028.jpg
+   runtime: "7020"
+   user_id: http://api-public.netflix.com/users/T1OjS5jzPVFVWaCyxqVL0hps1y89G_ZbanQyzmSXnSXck-/ratings/title/60029028
+   ext_id: http://api-public.netflix.com/catalog/titles/movies/60029028
+   predicted_rating: "4.5"
+   user_rating: "5.0"
+   
+ ratingDetailsActual:  
+   alternate_link: http://www.netflix.com/Movie/La_Femme_Nikita/60029028
+   average_rating: "3.7"
+   BoxArtMedium: http://cdn-8.nflximg.com/en_us/boxshots/small/60029028.jpg
+   BoxArtLarge: http://cdn-8.nflximg.com/en_us/boxshots/large/60029028.jpg
+   BoxArtSmall: http://cdn-8.nflximg.com/en_us/boxshots/tiny/60029028.jpg
+   user_id: http://api-public.netflix.com/users/T1OjS5jzPVFVWaCyxqVL0hps1y89G_ZbanQyzmSXnSXck-/ratings/title/60029028
+   runtime: "7020"
+   ext_id: http://api-public.netflix.com/catalog/titles/movies/60029028
+   user_rating: "5.0"
+   
+ ratingDetailsPredicted:  
+   alternate_link: http://www.netflix.com/Movie/La_Femme_Nikita/60029028
+   average_rating: "3.7"
+   BoxArtLarge: http://cdn-8.nflximg.com/us/boxshots/large/60029028.jpg
+   user_id: http://api-public.netflix.com/users/T1OjS5jzPVFVWaCyxqVL0hps1y89G_ZbanQyzmSXnSXck-/ratings/title/60029028
+   runtime: "7020"
+   ext_id: http://api-public.netflix.com/catalog/titles/movies/60029028
+   predicted_rating: "4.5"
+   
+ ratingDetailsIndex: 
+   number:0
+  #------------------------------------------------------------------------------------------------------------------------------------------------#

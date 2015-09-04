@@ -1,0 +1,97 @@
+--- 
+:Year: 
+  :callback: 
+    :fn: this.mv.fliterCategoryScale
+    :obj: 
+      :SessionKey: :Year
+      :filterKey: :year
+      :instanceObj: this.mv
+      :baseUrl: /flixrmi/application/listControl
+      :loadingImageId: loading
+      :loadingReadyClassName: ready
+      :loadingloadingClassName: loading
+      :mainViewId: categoryPanel_mainView
+  :dTickSize: 2.255
+  :dRange: 300
+  :outputOffSet: 1878
+  :type: daul
+:Rating: 
+  :callback: 
+    :fn: this.mv.fliterCategoryScale
+    :obj: 
+      :SessionKey: :Rating
+      :filterKey: :rating
+      :instanceObj: this.mv
+      :baseUrl: /flixrmi/application/listControl
+      :loadingImageId: loading
+      :loadingReadyClassName: ready
+      :loadingloadingClassName: loading
+      :mainViewId: categoryPanel_mainView
+  :dTickSize:  30
+  :dRange: 300
+  :type: daul
+  :ouputLabels: 
+  - "0.0"
+  - "0.5"
+  - "1.0"
+  - "1.5"
+  - "2.0"
+  - "2.5"
+  - "3.0"
+  - "3.5"
+  - "4.0"
+  - "4.5"
+  - "5.0"
+:Availability: 
+  :callback: 
+    :fn: this.mv.fliterCategoryScale
+    :obj: 
+      :SessionKey: :Availability
+      :filterKey: :availability
+      :instanceObj: this.mv
+      :baseUrl: /flixrmi/application/listControl
+      :loadingImageId: loading
+      :loadingReadyClassName: ready
+      :loadingloadingClassName: loading
+      :mainViewId: categoryPanel_mainView
+  :dTickSize: 25
+  :dRange: 300
+  :type: daul
+  :ouputLabels: 
+  - All
+  - Minus 1 Year
+  - Minus 6 Months
+  - Minus 3 Months
+  - Minus 1 Month
+  - Minus 1 Week
+  - Today
+  - Plus 1 Week
+  - Plus 1 Month
+  - Plus 3 Months
+  - Plus 6 Months
+  - Plus 1 Year
+  - All
+:ThumbSlider: 
+  :callback: 
+    :fn: this.mv.setThumbSize
+    :obj: 
+      :instanceObj: this.mv
+      :baseUrl: /flixrmi/application/ListVarsUpdate
+      :debugOutputId: initialoutput
+  :dTickSize:  1
+  :dRange:
+  - 0
+  - 400
+  :initValue: 193
+  :type: horiz
+:scrollAuto: 
+  :callback: 
+    :fn: this.mv.setScrollSpeed
+    :obj: 
+      :instanceObj: this.mv
+  :dTickSize:  1
+  :dRange:
+  - 1
+  - 100
+  :initValue: 20
+  :type: horiz

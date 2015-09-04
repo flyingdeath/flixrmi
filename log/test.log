@@ -1,0 +1,32 @@
+Unable to load meta_cach, underlying cause No such file to load -- meta_cach 
+
+ C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/dependencies.rb:304:in `depend_on'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/dependencies.rb:216:in `require_dependency'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-3.0.3/lib/active_record/fixtures.rb:862:in `try_to_load_dependency'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-3.0.3/lib/active_record/fixtures.rb:877:in `require_fixture_classes'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-3.0.3/lib/active_record/fixtures.rb:874:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-3.0.3/lib/active_record/fixtures.rb:874:in `require_fixture_classes'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-3.0.3/lib/active_record/fixtures.rb:857:in `fixtures'
+./test/test_helper.rb:19
+C:/webroot/flixrmi/test/functional/application_controller_test.rb:1:in `require'
+C:/webroot/flixrmi/test/functional/application_controller_test.rb:1
+C:/Ruby/lib/ruby/gems/1.8/gems/rake-0.9.2/lib/rake/rake_test_loader.rb:11:in `require'
+C:/Ruby/lib/ruby/gems/1.8/gems/rake-0.9.2/lib/rake/rake_test_loader.rb:11
+C:/Ruby/lib/ruby/gems/1.8/gems/rake-0.9.2/lib/rake/rake_test_loader.rb:5:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/rake-0.9.2/lib/rake/rake_test_loader.rb:5
+Unable to load test, underlying cause No such file to load -- test 
+
+ C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/dependencies.rb:304:in `depend_on'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/dependencies.rb:216:in `require_dependency'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-3.0.3/lib/active_record/fixtures.rb:862:in `try_to_load_dependency'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-3.0.3/lib/active_record/fixtures.rb:877:in `require_fixture_classes'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-3.0.3/lib/active_record/fixtures.rb:874:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-3.0.3/lib/active_record/fixtures.rb:874:in `require_fixture_classes'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-3.0.3/lib/active_record/fixtures.rb:857:in `fixtures'
+./test/test_helper.rb:19
+C:/webroot/flixrmi/test/functional/application_controller_test.rb:1:in `require'
+C:/webroot/flixrmi/test/functional/application_controller_test.rb:1
+C:/Ruby/lib/ruby/gems/1.8/gems/rake-0.9.2/lib/rake/rake_test_loader.rb:11:in `require'
+C:/Ruby/lib/ruby/gems/1.8/gems/rake-0.9.2/lib/rake/rake_test_loader.rb:11
+C:/Ruby/lib/ruby/gems/1.8/gems/rake-0.9.2/lib/rake/rake_test_loader.rb:5:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/rake-0.9.2/lib/rake/rake_test_loader.rb:5

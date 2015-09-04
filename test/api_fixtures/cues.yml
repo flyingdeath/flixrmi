@@ -1,0 +1,64 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+
+ #------------------------------------------------------------------------------------------------------------------------------------------------#
+ #------------------------------------------------------------------------------------------------------------------------------------------------#
+
+
+ reference1:
+  title_ref: "http://api-public.netflix.com/catalog/titles/movies/60029028"
+  position1: "50"
+  position2: "25"
+  
+ reference2:
+  title_id: "60029028"
+
+#------------------------------------------------------------------------------------------------------------------------------------------------#
+ queues:
+  queues_instant: http://api-public.netflix.com/users/T1OjS5jzPVFVWaCyxqVL0hps1y89G_ZbanQyzmSXnSXck-/queues/instant
+  queues_disc: http://api-public.netflix.com/users/T1OjS5jzPVFVWaCyxqVL0hps1y89G_ZbanQyzmSXnSXck-/queues/disc
+
+
+
+ #------------------------------------------------------------------------------------------------------------------------------------------------#
+ 
+ details1:  
+  start_index: "0"
+  etag: "299450325529"
+  number_of_results: "127"
+  results_per_page: "100"
+  url_template: http://api-public.netflix.com/users/T1OjS5jzPVFVWaCyxqVL0hps1y89G_ZbanQyzmSXnSXck-/queues/disc?{-join|&|sort|start_index|max_results}
+ 
+
+ #------------------------------------------------------------------------------------------------------------------------------------------------#
+ status0: 
+  status_code: "201"
+  message: success
+
+ #------------------------------------------------------------------------------------------------------------------------------------------------#
+ 
+  
+ status1: 
+  status_code: "201"
+  message: Move successful
+  
+ #------------------------------------------------------------------------------------------------------------------------------------------------#
+ 
+ titleinfo0: 
+   alternate_link: http://www.netflix.com/Movie/The_Next_Three_Days/70135743
+   position: "1"
+   title: The Next Three Days
+   titleShort: The Next Three Days
+   id: http://api-public.netflix.com/users/T1OjS5jzPVFVWaCyxqVL0hps1y89G_ZbanQyzmSXnSXck-/queues/disc/available/1/70135743
+   ext_id: http://api-public.netflix.com/catalog/titles/movies/70135743
+   updated: "1302465928"
+
+ #------------------------------------------------------------------------------------------------------------------------------------------------#
+ 
+ deleteStatus: 
+  status_code: "200"
+  message: Title deleted from queue

@@ -1,0 +1,25 @@
+
+
+<div class="EpsList">
+  <% if 'seasons,series'.index(@title.titleType) %>
+    <% if @title.titleType == 'seasons' %>
+      Episodes:
+    <% end %>
+    <% if @title.titleType == 'series'  %>
+      Seasons:
+    <% end %>
+  <ul id="<%=@title.id%>_Eps_list" class="Eps_list">
+    <% i = 1
+       len = @eps.count -%>
+    <% @eps.each do |ep| -%>
+      <li id="<%=ep.id%>_eps_<%=i%>" class="eps">
+        <a href="#" class="epsLink" id="<%=ep.id%>_ep">
+          <%= ep.title %>
+        </a>
+        <%='' if len > i-%>
+      </li>
+      <% i += 1 -%>
+    <%end -%>
+  </ul>  
+  <% end %>
+</div>

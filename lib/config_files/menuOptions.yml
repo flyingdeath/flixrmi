@@ -1,0 +1,103 @@
+---
+controlOptionsBaseUrl: /flixrmi/application/listGetControlOptions
+sortValues: 
+  Year: 
+  - _SortMenu
+  - _Sort_RatingMenu
+  Name: 
+  - _SortMenu
+  - _Sort_RatingMenu
+  Availability: 
+  - _SortMenu
+  - _Sort_RatingMenu
+  RatingAverage: 
+  - _Sort_RatingMenu
+  - _SortMenu
+  RatingUser: 
+  - _Sort_RatingMenu
+  - _SortMenu
+  RatingPredicted: 
+  - _Sort_RatingMenu
+  - _SortMenu
+sortSet: 
+  _Sort_RatingMenu: 
+    RatingPredicted: 0
+    RatingAverage: 1
+    RatingUser: 2
+  _SortMenu: 
+    Title: 0
+    release_year: 1
+    Availability: 2
+viewTypes: 
+  List: 0
+  Info List: 1
+  Hover List: 2
+  Thumbnails List: 3
+  Right Justfied List: 4
+  Thumbnails Grid: 5
+  Thumbnails Header Grid: 6
+  Thumbnails Close Grid: 7
+limit: 
+  '25': 0
+  '50': 1
+  '100': 2
+  '200': 3
+  '400': 4
+  '1000': 5
+selectsurfix: Select
+selects: 
+  :Sort: 
+  - Name
+  - Year
+  - Availability
+  - RatingPredicted
+  - RatingAverage
+  - RatingUser
+  :Limit: 
+  - 25
+  - 50
+  - 100
+  - 200
+  - 400
+  - 1000
+  :Format: 
+  - All
+  - Instant
+  - Disc
+  - Blu-ray
+  - DVD
+  :Rating_Type: 
+  - Predicted
+  - Average
+  - User
+  - non-rated
+filterSet: 
+  _Filter_RatingTypeMenu: 
+    Predicted: 0
+    Average: 1
+    User: 2
+    Non-User: 3
+  _Filter_FormatMenu: 
+    All: 0
+    Instant: 1
+    Disc: 2
+    Blu-ray: 3
+    DVD: 4
+Envelops:
+  MenuItem_Options_SortEnvelop: SortEnvelop
+  MenuItem_Options_ViewEnvelop: ViewEnvelop
+  MenuItem_Options_FilterEnvelop: FilterEnvelop
+sliders:
+  Year: year
+  Availability: availability
+  Rating: rating
+filterSliders: 
+  year_filter: year
+  availability_filter: availability
+  rating_filter: rating
+viewMenu:
+  _Options_ViewTypesMenu: viewType
+limitMenu:
+  _LimitMenu: limit
+formatMenu: _Filter_FormatMenu
+ratingMenu: _Filter_RatingTypeMenu
