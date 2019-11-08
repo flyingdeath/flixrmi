@@ -1,6 +1,23 @@
 ruby netflix api classes oauth connection classes and other modules  
 https://github.com/flyingdeath/flixrmi/tree/master/lib
 
+controller class for handling the netflix api connection / retry error handler 
+https://github.com/flyingdeath/flixrmi/blob/master/lib/netflix_api_connector.rb
+
+Oauth wapper connectation class my oauth client and the oauth gem 
+https://github.com/flyingdeath/flixrmi/blob/master/lib/Oauthwapper.rb
+
+
+data model of the api structure api end point urls and params requirements 
+https://github.com/flyingdeath/flixrmi/blob/master/lib/netflix_api_connection_data.rb
+
+
+my oauth client only used to download into files 
+https://github.com/flyingdeath/flixrmi/blob/master/lib/Oauth_client.rb
+
+YAML Converter data model handler 
+https://github.com/flyingdeath/flixrmi/blob/master/lib/YAMLConverter.rb
+
 config files for ui configuretion  
 https://github.com/flyingdeath/flixrmi/tree/master/lib/config_files
 
@@ -12,8 +29,29 @@ test connection from the
 https://github.com/flyingdeath/flixrmi/blob/master/app/controllers/tconnection_controller.rb
 
 
-local db and netflix api models created by files in lib
+mainview controller spa server side starting piont 
+https://github.com/flyingdeath/flixrmi/blob/master/app/controllers/mainview_controller.rb
+
+list and filter module for use with the keyword include in controllers classes 
+https://github.com/flyingdeath/flixrmi/blob/master/lib/TitleControl.rb
+
+
+local db and netflix api models created from the files in lib
 https://github.com/flyingdeath/flixrmi/tree/master/app/models
+
+ActiveNetflix mutil threaded api data flows through this super class 
+https://github.com/flyingdeath/flixrmi/blob/master/lib/ActiveNetflix.rb
+
+sax parser model class function module   
+https://github.com/flyingdeath/flixrmi/blob/master/lib/netflixParser.rb
+
+sax parser model classes 
+https://github.com/flyingdeath/flixrmi/blob/master/lib/modelParsers.rb
+
+
+example of model title in this case 
+https://github.com/flyingdeath/flixrmi/blob/master/app/models/title.rb
+
 
 main spa template start point 
 https://github.com/flyingdeath/flixrmi/blob/master/app/views/layouts/mainview.html.erb
@@ -26,6 +64,23 @@ https://github.com/flyingdeath/flixrmi/blob/master/app/views/mainview/_fileLink.
 main javascirpt window.onload start point
 https://github.com/flyingdeath/flixrmi/blob/master/app/views/mainview/index.erb
 
+javascript files 
+https://github.com/flyingdeath/flixrmi/tree/master/public/flixrmi/javascripts/app
+
+main javascript file for the main view spa
+https://github.com/flyingdeath/flixrmi/blob/master/public/flixrmi/javascripts/app/mainViewClass.js
+
+ajax connection class wapper for yui connect class
+https://github.com/flyingdeath/flixrmi/blob/master/public/flixrmi/javascripts/app/connectionClass.js
+
+ajax endless scroll trigger class
+https://github.com/flyingdeath/flixrmi/blob/master/public/flixrmi/javascripts/app/scrollClass.js
+
+panel class rolodex style cos(theta) bezier curve to panel management to inner dom updates with ajax callback 
+https://github.com/flyingdeath/flixrmi/blob/master/public/flixrmi/javascripts/app/panelClass.js
+
+a swiss army knife of functionalty 'helper' Class
+https://github.com/flyingdeath/flixrmi/blob/master/public/flixrmi/javascripts/app/helperClass.js
 
 
 == Welcome to Rails
