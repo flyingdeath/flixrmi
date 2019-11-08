@@ -1,3 +1,33 @@
+ruby netflix api classes oauth connection classes and other modules  
+https://github.com/flyingdeath/flixrmi/tree/master/lib
+
+config files for ui configuretion  
+https://github.com/flyingdeath/flixrmi/tree/master/lib/config_files
+
+
+controllers 
+https://github.com/flyingdeath/flixrmi/tree/master/app/controllers
+
+test connection from the 
+https://github.com/flyingdeath/flixrmi/blob/master/app/controllers/tconnection_controller.rb
+
+
+local db and netflix api models created by files in lib
+https://github.com/flyingdeath/flixrmi/tree/master/app/models
+
+main spa template start point 
+https://github.com/flyingdeath/flixrmi/blob/master/app/views/layouts/mainview.html.erb
+
+
+files include
+https://github.com/flyingdeath/flixrmi/blob/master/app/views/mainview/_fileLink.html.erb
+
+
+main javascirpt window.onload start point
+https://github.com/flyingdeath/flixrmi/blob/master/app/views/mainview/index.erb
+
+
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
