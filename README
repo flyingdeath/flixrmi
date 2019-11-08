@@ -7,13 +7,13 @@ https://github.com/flyingdeath/flixrmi/blob/master/lib/netflix_api_connector.rb
 Oauth wapper connectation class my oauth client and the oauth gem 
 https://github.com/flyingdeath/flixrmi/blob/master/lib/Oauthwapper.rb
 
+my oauth client mostly used to download into files 
+https://github.com/flyingdeath/flixrmi/blob/master/lib/Oauth_client.rb
 
 data model of the api structure api end point urls and params requirements 
 https://github.com/flyingdeath/flixrmi/blob/master/lib/netflix_api_connection_data.rb
 
 
-my oauth client only used to download into files 
-https://github.com/flyingdeath/flixrmi/blob/master/lib/Oauth_client.rb
 
 YAML Converter data model handler 
 https://github.com/flyingdeath/flixrmi/blob/master/lib/YAMLConverter.rb
