@@ -47,7 +47,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.16)
     mysql2 (0.2.13)
-    oauth (0.4.5)
+    oauth (0.5.5)
     oink (0.9.3)
       activerecord
       hodel_3000_compliant_logger
